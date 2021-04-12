@@ -1,0 +1,82 @@
+<script id="entry-template" type="text/x-handlebars-template">
+  <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-image: url('https://drive.google.com/thumbnail?id=1XYqQYjiKDcFfqmEO5rpF-QWibGY4a_zr')">
+    <div> <img src='https://www.bellariaigeamarina.org/storage-image/foto-da-inserire/10250081_891378617644203_7977951024803197059_n.jpg' style= "display:block; margin-left:auto; margin-right:auto; border-radius:50%; max-width:50%"> </div>
+      <style>
+        .center-font {
+        margin: auto; 
+        width: 15%
+      }  
+      </style>
+      <div class="center-font"> <h1>MENU</h1> </div>
+         
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      {{#each categories}}
+    
+      <div style="border: 3px solid black; padding: 5px; margin: 5px;">
+        
+        <h1 id="{{name}}_header">{{name}}</h1>
+        <div id="{{name}}_items" class="body" style="display: block">
+          {{#each items}}
+          <div>
+            {{name}} <img src="{{image}}" style="max-width: 20px; display: inline;"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<!-- <script>
+  // compile the template
+  var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
+  // execute the compiled template and print the output to the console
+  var html = template({ doesWhat: "rocks!" });
+  document.write(html)
+</script> -->
+
+<script>
+  var source = document.getElementById("entry-template").innerHTML;
+  var template = Handlebars.compile(source);
+
+  var context = {
+    categories: [
+      {name: "BIRRE", items: [ { name: "MAES PILS", image: "https://www.w3schools.com/css/paris.jpg"}, { name: "LAGUNITAS IPA", image: "https://www.w3schools.com/css/paris.jpg"}], }, 
+      {name: "DRINK e BEVANDE", items: [{name: "MOSCOW MULE"}], },
+      {name: "BURGER e PANINI", items: [{name: "JOHN BARLEYCORN"}], }, 
+      {name: "FRITTURE"},
+
+      {name: "INSALATE"},
+      {name: "DOLCI & CAFFETTERIA"},
+    ]
+  };
+  var html = template(context);
+  document.write(html)
+</script>
+
+<script type="text/javascript">
+
+console.log("<3")
+//console.log(document.querySelectorAll("[id$=items]"));
+
+document.querySelectorAll("[id$=_items]").forEach((itemsElement) => {
+  itemsElement.style.display = "none"
+})
+
+document.querySelectorAll("[id$=_header]").forEach((headerElement) => {
+  element.onclick = function () {
+    const itemsId = headerElement.id.replace("_header", "_items")
+    const itemsElement = document.getElementById(itemsId)
+  
+    if (itemsElement.style.display == "block") {
+      itemsElement.style.display = "none"
+    }
+    else {
+      itemsElement.style.display = "block" 
+    }
+  }
+})
+
+</script>

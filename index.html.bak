@@ -1,0 +1,71 @@
+<div style="font-family: Times New Roman; background-image: url('https://www.w3schools.com/cssref/img_tree.gif'); background-repeat: no-repeat;">
+  <div>LOGO</div>
+  <div>Menu</div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr;">
+  
+  <div style="border: 1px solid black; padding: 5px; margin: 5px;">
+    <img src="https://www.w3schools.com/css/paris.jpg" style="border-radius: 100%; max-width: 20px;"/>
+    <h1 id="birre_header">birre</h1>
+    <div id="birre_items" class="body" style="display: block;">
+      <div>
+         birra 1 <img src="https://www.w3schools.com/css/paris.jpg" style="border-radius: 100%; max-width: 20px; display: inline;"/>
+      </div>
+      <div>
+         birra 2 <img src="https://www.w3schools.com/css/paris.jpg" style="border-radius: 100%; max-width: 20px; display: inline;"/>
+      </div>
+    </div>
+  </div>
+  
+  <div style="border: 1px solid black; padding: 5px; margin: 5px;">
+    <img src="" style="border-radius: 100%; max-width: 20px;"/>
+    <h1 id="drink e bevande_header">drink e bevande</h1>
+    <div id="drink e bevande_items" class="body" style="display: block;">
+    </div>
+  </div>
+  
+  <div style="border: 1px solid black; padding: 5px; margin: 5px;">
+    <img src="" style="border-radius: 100%; max-width: 20px;"/>
+    <h1 id="panini e burgers_header">panini e burgers</h1>
+    <div id="panini e burgers_items" class="body" style="display: block;">
+    </div>
+  </div>
+  
+  <div style="border: 1px solid black; padding: 5px; margin: 5px;">
+    <img src="" style="border-radius: 100%; max-width: 20px;"/>
+    <h1 id="fritture_header">fritture</h1>
+    <div id="fritture_items" class="body" style="display: block;">
+    </div>
+  </div>
+  
+  <div style="border: 1px solid black; padding: 5px; margin: 5px;">
+    <img src="" style="border-radius: 100%; max-width: 20px;"/>
+    <h1 id="insalate_header">insalate</h1>
+    <div id="insalate_items" class="body" style="display: block;">
+    </div>
+  </div>
+  
+  <div style="border: 1px solid black; padding: 5px; margin: 5px;">
+    <img src="" style="border-radius: 100%; max-width: 20px;"/>
+    <h1 id="dolci_header">dolci</h1>
+    <div id="dolci_items" class="body" style="display: block;">
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  
+  <script type="text/javascript">
+  document.getElementById("birre_items").style.display = "none"
+  
+  document.getElementById("birre_header").onclick = function() {
+  const disp = document.getElementById("birre_items").style.display
+  
+  if (disp == "block") {
+    document.getElementById("birre_items").style.display = "none"
+  }
+  else {
+    document.getElementById("birre_items").style.display = "block"
+  }
+  }
+  </script>

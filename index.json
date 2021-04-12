@@ -1,0 +1,11 @@
+{
+  categories: [
+    {name: "birre", items: [ { name: "birra 1", image: "https://www.w3schools.com/css/paris.jpg"}, { name: "birra 2", image: "https://www.w3schools.com/css/paris.jpg"}], image: "https://www.w3schools.com/css/paris.jpg"}, 
+    {name: "drink e bevande"}, 
+    {name: "panini e burgers"}, 
+    {name: "fritture"},
+
+    {name: "insalate"},
+    {name: "dolci"},
+]
+}
