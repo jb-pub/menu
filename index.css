@@ -1,10 +1,10 @@
 .main {
     font-family: Stencil Regular;
-    background-image: url('https://drive.google.com/file/d/1shzVBZLhPcZGYevnX-5Lf4th6Sb4Mgjc/view?usp=sharing');
+    background-image: url('https://drive.google.com/thumbnail?id=1shzVBZLhPcZGYevnX-5Lf4th6Sb4Mgjcg');
     background-position: center center;
     background-repeat:no-repeat;
     background-attachment:fixed;
-    background-size:cover;
+    background-size: cover;
 }
 .logo {
     /*
