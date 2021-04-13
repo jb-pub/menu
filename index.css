@@ -1,5 +1,5 @@
 .main {
-    font-family: Stencil Regular;
+    font-family: Stardos Stencil;
     background-image: url('images/sfondo_prova3.jpg');
     background-position: center center;
     background-repeat:repeat-x;
@@ -52,7 +52,7 @@
 
 .eachcategory > :nth-child(1) {
     background-position: right;
-    background-image: url('https://image.flaticon.com/icons/png/512/1549/1549612.png');
+    background-image: url('images/arrow_point_right.png');
     background-repeat: no-repeat;
     background-size: contain;
     justify-content: center;

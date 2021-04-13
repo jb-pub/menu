@@ -9,8 +9,7 @@
         
         <div id="{{name}}_header"> 
           <div>{{name}}</div>
-          <!-- <div style="flex-grow: 0;">FRECCIA</div> -->
-        </div>
+                 </div>
         <div id="{{name}}_items" class="body" style="display: block">
           {{#each items}}
           <div>
@@ -41,7 +40,7 @@
 
   var context = {
     categories: [
-      {name: "BIRRE", items: [ { name: "MAES PILS", image: "https://www.w3schools.com/css/paris.jpg"}, { name: "LAGUNITAS IPA", image: "https://www.w3schools.com/css/paris.jpg"}], }, 
+      {name: "BIRRE", items: [ { name: "MAES PILS"}, { name: "LAGUNITAS IPA"}], }, 
       {name: "DRINK e BEVANDE", items: [{name: "MOSCOW MULE"}], },
       {name: "BURGER e PANINI", items: [{name: "JOHN BARLEYCORN"}], }, 
       {name: "FRITTURE"},
@@ -70,11 +69,11 @@ document.querySelectorAll("[id$=_header]").forEach((headerElement) => {
     
     if (itemsElement.style.display == "block") {
       itemsElement.style.display = "none"
-      headerElement.style.backgroundImage = "url('https://image.flaticon.com/icons/png/512/1549/1549612.png')";
+      headerElement.style.backgroundImage = url('images/arrow_point_right.png');
     }
     else {
       itemsElement.style.display = "block" 
-      headerElement.style.backgroundImage = "url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8AAACenp739/dLS0s/Pz/j4+Pg4OD4+Pje3t5OTk77+/tISEg8PDzm5uZFRUULCwsSEhJXV1exsbEICAgbGxvW1tZ5eXktLS28vLzw8PBqamqSkpIQEBAXFxekpKRcXFzMzMyDg4MlJSVNZGIcAAAEl0lEQVR4nO2d21bbMBRE4wZy4WICSYAk3Pn/f2xocImssX0kY1uTNfuta1WVdn2kM6ppMhoJIYQQQgghhBBCCHF63D88rh8f7odeRmdc7rIDD0OvpCvusoK3oZfSDU/ZD3+GXkwXzLJjZkMvpwM2juFm6OV0wB/H8BTLVIb8yJAfGfIjQ35kyI8M+ZEhPzLkR4b8yJAfGfIjQ35kyI8M+ZEhPzLkR4b8yJAfGfIjQ35kyI8M+ZEhPzLkR4b8yJAfGfIjQ35kyI8M+ZEhPzLkR4b8yJAfGfIjQ35kyI8M+ZEhPzLkR4b8yJAfGfIjQ35kyI8M+ZEhPzLkR4ap8L5cbsZRI3/DcLtZLt+jRlpZHpa320aMbW+4/f7E82XEWCMPxfoW8/DBrQ3nq2JwZ5/pfvSR46tp8Oi2htPVz+in4NEm8uMVhj/Flobz1fHwPHS4iSdniVmoYjvDuTt5Nw/xzp0kCyzUVobT0tx3YcONXJVmWYQptjGcPpfmvgkabuUiKxNUqC0M597MF2FLN/LhzROkGG/oC2YfoYs3ce9PFLIXow3Le/CLjr7IZefP9GxXjDWclPfgnl3M8i3cgL9Nc6FGGoIS7eic+WLsHzb2Qo0zRCV6Fhf9TYzLHSOzN40oQ69NfD3BDgX3nPszrmyFGmM4XfjTXV+2WX8zl2egbEyKEYaoRK86FmyxF8MNJ2CmLvdgwQycqJamEWw4ufUnOu9BcBTbNEINUYme/8byDcxQoTYqBhr23SZcxuC4abz1hxlOwCl61Zvg/kQFTWMxqR8TZIiiWtdtogRo/Q0naoghKtGbfgVx06h9igGGQ7UJlzE4UW/rFO2GkxfwBHsXHMEAV5dRzYZwD/7+8g3AAFetaDWEp+hAX5cYtheNhvnK/zP734MFM1ColXvRZpiDPXg95BdeogBXUagmQ3SK9hXVMDDA4adoMUR7cLgSPYAC3DNUNBjm4DYxSJtwQAEO7sVmQ9QHe45qEGvTaDScgFO076iGMTaNJsO02oQLuvX7hdpgiNpETzd6C5YAV2+YTlTDoKZRvhLXGsI2kdQ3W6OmUboS1xnm4An2eaO3gJrGi/O2vcYwuaiGaQpw1YawTfS9fAOoaayOCrXSME8wqmHQa5ujplFliEp0+KhWQW2AqzCEezCJJINAAe5/oWJDeKNPVrAiwH2fqNAw5aiGQQFufVBEhvna/+0JRTUMejP1r1CBIboPDnujt4AC3PPXU/QNkWDaJXoABbjbHBiiUzS1qIZBAW6/F8uGaA+m2yZKoJ/Y2L46v37dop+yYBGETePT/bG4j0//tzDswQIU4BpJNqphwF5sIKUbvQX4L3B1DPXyJR4Y4Kph2oMF6LVNJQne6C2gWz8m/aiGga9tTqVED6AAB+CIahgU4Dxoohrksrn180Q1TGPT4N2DBejWf/wE6QVH9QGOLaphappGWi9f4qlsGsxtwqWiaZBGNQw6blJ8+RIPaBr8bcLFu/WfRJtwcfcid1TDOAGOPaphxj9P8TrmQxkIGBf/G/zu9PZgwfvber1+6/azO4QQQgghhBBCCCGEGIa/J9wq2w6SN7AAAAAASUVORK5CYII=')";
+      headerElement.style.backgroundImage = url('images/arrow_point_down.png');
     }
   }
 })
