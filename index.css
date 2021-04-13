@@ -1,0 +1,61 @@
+.main {
+    font-family: Stencil Regular;
+    background-image: url('https://drive.google.com/file/d/1shzVBZLhPcZGYevnX-5Lf4th6Sb4Mgjc/view?usp=sharing');
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:cover;
+}
+.logo {
+    /*
+    background-image: url('https://www.bellariaigeamarina.org/storage-image/foto-da-inserire/10250081_891378617644203_7977951024803197059_n.jpg');
+    background-position: center;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 10px; 
+    margin: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 20px; 
+    margin: 20px;
+    font-weight: bold;
+    font-size:40px;
+}
+
+.center-font {
+    margin: auto; 
+    width: 15%
+}  
+
+.categories {
+    display: flex; 
+    flex-direction: column;
+    } 
+
+.eachcategory {
+    border: 1px solid black;
+    padding: 10px; 
+    margin: 10px;
+    background-color: bisque;
+    font-weight: bold;
+    font-size:40px;
+}   
+
+.eachcategory > :nth-child(1) {
+    background-position: right;
+    background-image: url('https://image.flaticon.com/icons/png/512/1549/1549612.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: center;
+    display: flex; 
+}
