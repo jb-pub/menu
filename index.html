@@ -24,11 +24,16 @@ categories:
         <div id="{{name}}_header"> 
           <div>{{name}}</div>
         </div>
-        <div id="{{name}}_items" class="body" style="display: block">
+
+        <div id="{{name}}_items">
+               
           {{#each items}}
           <div>
-            {{name}} <img src="{{image}}" style="max-width: 20px; display: inline;"/>
+            {{name}} 
           </div>
+          <div id="{{description}}_details" style="display:block">
+           <div> {{{description}}} </div>
+        </div>
           {{/each}}
         </div>
       </div>
@@ -90,19 +95,28 @@ categories:
 
   // main()
 
-  // var context = {
-  //   categories: [
-  //     {name: "BIRRE", items: [ { name: "MAES PILS"}, { name: "LAGUNITAS IPA"}], }, 
-  //     {name: "DRINK e BEVANDE", items: [{name: "MOSCOW MULE"}], },
-  //     {name: "BURGER e PANINI", items: [{name: "JOHN BARLEYCORN"}], }, 
-  //     {name: "FRITTURE"},
+  var context = {
+    "categories": [
+      {
+          "name": "BIRRE", "items": [
+              { "name": "MAES PILS", "details": [{"description": "Birra chiara", "alc": "5°", "size1": "piccola", "size2": "media", "price1": "3 €", "price2": "5 €" }] },
+              { "name": "AUGUSTINER EDELSTOFF", "details": [{"description": "Birra chiara", "alc": "5,6°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
+          { "name": "LAGUNITAS IPA", "details":[{"description": "India pale ale", "alc": "6,2°", "size1": "", "size2": "media", "price1": "", "price2": "5 €" }]},
+          { "name": "HACKER PSCHORR KELLER", "details": [{"description": "Birra bionda non filtrata", "alc": "5,5°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
+          { "name": "FLOREFFE TRIPLE", "details": [{"description": "Birra d'abbazia ambrata", "alc": "7,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €" }]},
+          { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]}]
+      },
+      {"name": "DRINK & BEVANDE", "items": [{"name": "MOSCOW MULE"}] },
+      {"name": "BURGER & PANINI", "items": [{"name": "JOHN BARLEYCORN"}] }, 
+      {"name": "FRITTURE"},
 
-  //     {name: "INSALATE"},
-  //     {name: "DOLCI & CAFFETTERIA"},
-  //   ]
-  // };
-  var yml = jsyaml.load(document.getElementById("context").innerHTML)
-  var html = template(yml);
+      {"name": "INSALATE"},
+      {"name": "DOLCI & CAFFETTERIA"}
+      ]
+  }
+
+  // var yml = jsyaml.load(document.getElementById("context").innerHTML)
+  var html = template(context);
   document.write(html)
 </script>
 
