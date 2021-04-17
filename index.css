@@ -9,4 +9,19 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 30px 1fr 30px;
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-blend-mode: lighten; */
+}
+
+.categories-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories-column > * {
+    border: 1px solid black;
+    flex-grow: 1;
+    margin: 50px 50px;
 }

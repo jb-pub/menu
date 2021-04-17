@@ -6,8 +6,11 @@
     <body>
         <div id="page">
             <div>HEADER</div>
-            <div>
-                <div v-for="category in categories" v-bind:category="category">{{category.name}}</div>
+            <div class="categories-column">
+                <div v-for="category in categories" v-bind:category="category">
+                    {{category.name}}
+                    <div></div>
+                </div>
             </div>
             <div>FOOTER</div>
         </div>
@@ -19,7 +22,7 @@
 var page = new Vue({
     el: '#page',
     data: {
-        categories: ["A", "B", "C"]
+        categories: []
     },
     methods: {
         
