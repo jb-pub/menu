@@ -1,2 +1,4 @@
 excel/**.xlsx
 excel/**.xlsx#
+excel/**.json
+excel/**.yml

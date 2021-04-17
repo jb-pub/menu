@@ -1,6 +1,20 @@
+<script id="context" type="text/yml">
+categories:
+  - name: CATEGORIA 1
+    items:
+      - name: ITEM 1
+      - name: ITEM 2
+  - name: CATEGORIA 2
+    items:
+      - name: ITEM 3
+      - name: ITEM 4
+</script>
+
+<script src="context.yml"></script>
+
 <script id="entry-template" type="text/x-handlebars-template">
   <div class="main">
-    <div class="logo"><img src="images/logo_prova.png"></div> 
+1    <div class="logo"><img src="images/logo_prova.png" /></div> 
     <div class="menu">MENU</div>  
     <div class="categories">
       {{#each categories}}
@@ -9,7 +23,7 @@
         
         <div id="{{name}}_header"> 
           <div>{{name}}</div>
-                 </div>
+        </div>
         <div id="{{name}}_items" class="body" style="display: block">
           {{#each items}}
           <div>
@@ -34,28 +48,66 @@
   document.write(html)
 </script> -->
 
+<script src="js-yaml.min.js"></script>
+
 <script>
+
   var source = document.getElementById("entry-template").innerHTML;
   var template = Handlebars.compile(source);
 
-  var context = {
-    categories: [
-      {name: "BIRRE", items: [ { name: "MAES PILS"}, { name: "LAGUNITAS IPA"}], }, 
-      {name: "DRINK e BEVANDE", items: [{name: "MOSCOW MULE"}], },
-      {name: "BURGER e PANINI", items: [{name: "JOHN BARLEYCORN"}], }, 
-      {name: "FRITTURE"},
+  // async function main() {
+  //   let response = await fetch("context.yml", { method: "GET", headers: { "Content-Type": "text/plain" }})
+  //   let ctx = await response.text()
 
-      {name: "INSALATE"},
-      {name: "DOLCI & CAFFETTERIA"},
-    ]
-  };
-  var html = template(context);
+  //   var yml = jsyaml.load(ctx)
+
+  //   var html = template(yml)
+
+  //   var doc = new DOMParser().parseFromString(html, "text/xml")
+  //   // console.log(doc.firstChild)
+  //   document.firstChild.append(doc.firstChild)
+
+  //   // document.querySelectorAll("[id$=_items]").forEach((itemsElement) => {
+  //   //   itemsElement.style.display = "none"
+  //   // })
+
+  //   // document.querySelectorAll("[id$=_header]").forEach((headerElement) => {
+  //   //   headerElement.onclick = function () {
+  //   //     const itemsId = headerElement.id.replace("_header", "_items")
+  //   //     const itemsElement = document.getElementById(itemsId)
+        
+  //   //     if (itemsElement.style.display == "block") {
+  //   //       itemsElement.style.display = "none"
+  //   //       headerElement.style.backgroundImage = url('images/arrow_point_right.png');
+  //   //     }
+  //   //     else {
+  //   //       itemsElement.style.display = "block" 
+  //   //       headerElement.style.backgroundImage = url('images/arrow_point_down.png');
+  //   //     }
+  //   //   }
+  //   // })
+  // }
+
+  // main()
+
+  // var context = {
+  //   categories: [
+  //     {name: "BIRRE", items: [ { name: "MAES PILS"}, { name: "LAGUNITAS IPA"}], }, 
+  //     {name: "DRINK e BEVANDE", items: [{name: "MOSCOW MULE"}], },
+  //     {name: "BURGER e PANINI", items: [{name: "JOHN BARLEYCORN"}], }, 
+  //     {name: "FRITTURE"},
+
+  //     {name: "INSALATE"},
+  //     {name: "DOLCI & CAFFETTERIA"},
+  //   ]
+  // };
+  var yml = jsyaml.load(document.getElementById("context").innerHTML)
+  var html = template(yml);
   document.write(html)
 </script>
 
 <script type="text/javascript">
 
-console.log("<3")
 //console.log(document.querySelectorAll("[id$=items]"));
 
 document.querySelectorAll("[id$=_items]").forEach((itemsElement) => {

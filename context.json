@@ -1,0 +1,11 @@
+{
+    "categories": [
+    {"name": "BIRRE", "items": [ { "name": "MAES PILS"}, { "name": "LAGUNITAS IPA"}] }, 
+    {"name": "DRINK e BEVANDE", "items": [{"name": "MOSCOW MULE"}] },
+    {"name": "BURGER e PANINI", "items": [{"name": "JOHN BARLEYCORN"}] }, 
+    {"name": "FRITTURE"},
+
+    {"name": "INSALATE"},
+    {"name": "DOLCI & CAFFETTERIA"}
+    ]
+}
