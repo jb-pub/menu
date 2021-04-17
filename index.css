@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 30px 1fr 30px;
-    background-image: url("images/bg.png");
+    background-image: url("/images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-blend-mode: lighten; */
