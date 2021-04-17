@@ -1,147 +1,34 @@
-<script id="context" type="text/yml">
-categories:
-  - name: CATEGORIA 1
-    items:
-      - name: ITEM 1
-      - name: ITEM 2
-  - name: CATEGORIA 2
-    items:
-      - name: ITEM 3
-      - name: ITEM 4
-</script>
-
-<script src="context.yml"></script>
-
-<script id="entry-template" type="text/x-handlebars-template">
-  <div class="main">
-1    <div class="logo"><img src="images/logo_prova.png" /></div> 
-    <div class="menu">MENU</div>  
-    <div class="categories">
-      {{#each categories}}
-    
-      <div class="eachcategory">
-        
-        <div id="{{name}}_header"> 
-          <div>{{name}}</div>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div>HEADER</div>
+            <div>
+                <div v-for="category in categories" v-bind:category="category">{{category.name}}</div>
+            </div>
+            <div>FOOTER</div>
         </div>
-
-        <div id="{{name}}_items">
-               
-          {{#each items}}
-          <div>
-            {{name}} 
-          </div>
-          <div id="{{description}}_details" style="display:block">
-           <div> {{{description}}} </div>
-        </div>
-          {{/each}}
-        </div>
-      </div>
-      {{/each}}
-    </div>
-  </div>
-</script>
-
-<link rel="stylesheet" href="index.css">
-
-<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-<!-- <script>
-  // compile the template
-  var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
-  // execute the compiled template and print the output to the console
-  var html = template({ doesWhat: "rocks!" });
-  document.write(html)
-</script> -->
-
-<script src="js-yaml.min.js"></script>
-
-<script>
-
-  var source = document.getElementById("entry-template").innerHTML;
-  var template = Handlebars.compile(source);
-
-  // async function main() {
-  //   let response = await fetch("context.yml", { method: "GET", headers: { "Content-Type": "text/plain" }})
-  //   let ctx = await response.text()
-
-  //   var yml = jsyaml.load(ctx)
-
-  //   var html = template(yml)
-
-  //   var doc = new DOMParser().parseFromString(html, "text/xml")
-  //   // console.log(doc.firstChild)
-  //   document.firstChild.append(doc.firstChild)
-
-  //   // document.querySelectorAll("[id$=_items]").forEach((itemsElement) => {
-  //   //   itemsElement.style.display = "none"
-  //   // })
-
-  //   // document.querySelectorAll("[id$=_header]").forEach((headerElement) => {
-  //   //   headerElement.onclick = function () {
-  //   //     const itemsId = headerElement.id.replace("_header", "_items")
-  //   //     const itemsElement = document.getElementById(itemsId)
-        
-  //   //     if (itemsElement.style.display == "block") {
-  //   //       itemsElement.style.display = "none"
-  //   //       headerElement.style.backgroundImage = url('images/arrow_point_right.png');
-  //   //     }
-  //   //     else {
-  //   //       itemsElement.style.display = "block" 
-  //   //       headerElement.style.backgroundImage = url('images/arrow_point_down.png');
-  //   //     }
-  //   //   }
-  //   // })
-  // }
-
-  // main()
-
-  var context = {
-    "categories": [
-      {
-          "name": "BIRRE", "items": [
-              { "name": "MAES PILS", "details": [{"description": "Birra chiara", "alc": "5°", "size1": "piccola", "size2": "media", "price1": "3 €", "price2": "5 €" }] },
-              { "name": "AUGUSTINER EDELSTOFF", "details": [{"description": "Birra chiara", "alc": "5,6°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
-          { "name": "LAGUNITAS IPA", "details":[{"description": "India pale ale", "alc": "6,2°", "size1": "", "size2": "media", "price1": "", "price2": "5 €" }]},
-          { "name": "HACKER PSCHORR KELLER", "details": [{"description": "Birra bionda non filtrata", "alc": "5,5°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
-          { "name": "FLOREFFE TRIPLE", "details": [{"description": "Birra d'abbazia ambrata", "alc": "7,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €" }]},
-          { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]}]
-      },
-      {"name": "DRINK & BEVANDE", "items": [{"name": "MOSCOW MULE"}] },
-      {"name": "BURGER & PANINI", "items": [{"name": "JOHN BARLEYCORN"}] }, 
-      {"name": "FRITTURE"},
-
-      {"name": "INSALATE"},
-      {"name": "DOLCI & CAFFETTERIA"}
-      ]
-  }
-
-  // var yml = jsyaml.load(document.getElementById("context").innerHTML)
-  var html = template(context);
-  document.write(html)
-</script>
+    </body>
+</html>
 
 <script type="text/javascript">
 
-//console.log(document.querySelectorAll("[id$=items]"));
-
-document.querySelectorAll("[id$=_items]").forEach((itemsElement) => {
-  itemsElement.style.display = "none"
-})
-
-document.querySelectorAll("[id$=_header]").forEach((headerElement) => {
-  headerElement.onclick = function () {
-    const itemsId = headerElement.id.replace("_header", "_items")
-    const itemsElement = document.getElementById(itemsId)
-    
-    if (itemsElement.style.display == "block") {
-      itemsElement.style.display = "none"
-      headerElement.style.backgroundImage = url('images/arrow_point_right.png');
+var page = new Vue({
+    el: '#page',
+    data: {
+        categories: ["A", "B", "C"]
+    },
+    methods: {
+        
+    },
+    created: function () {
+        fetch("context.json")
+            .then((resp) => resp.json())
+            .then((json) => page.categories = json.categories)
     }
-    else {
-      itemsElement.style.display = "block" 
-      headerElement.style.backgroundImage = url('images/arrow_point_down.png');
-    }
-  }
 })
 
 </script>
