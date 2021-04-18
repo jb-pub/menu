@@ -1,18 +1,44 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+
+        <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Stardos+Stencil" /> -->
+
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <div id="page">
-            <div>HEADER</div>
-            <div class="categories-column">
-                <div v-for="category in categories" v-bind:category="category">
-                    {{category.name}}
-                    <div></div>
+            <div class="logo"></div>
+            <div v-if="currentCategory">
+                <div class="category-box">
+                    <!-- <div class="category-image"></div> -->
+                    <div class="category-title">
+                        <span v-on:click="currentCategory.selected = false; currentCategory = null;">{{currentCategory.name}}</span>
+                        <span v-if="currentSubcategory" v-on:click="currentSubcategory.expanded = false">{{currentSubcategory.name}}</span>
+                    </div>
+                    <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
+                </div>
+                <div class="items-container" >
+                    <div v-for="subcategory in currentCategory.subcategories" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
+                        <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id" v-on:click="subcategory.expanded = !subcategory.expanded">{{subcategory.name}}</div>
+                        <div class="item-box" v-for="item in subcategory.items" v-if="subcategory.expanded">
+                            <div class="item-title">{{item.name}}</div>
+                        </div>
+                    </div>
+    
                 </div>
             </div>
-            <div>FOOTER</div>
+            <div class="categories-column" v-if="!currentCategory">
+                <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
+                <div v-for="category in categories">
+                    <div class="category-box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;">
+                        <!-- <div class="category-image"></div> -->
+                        <div class="category-title"><span>{{category.name}}</span></div>
+                        <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
+                    </div>
+                </div>
+            </div>
+            <div></div>
         </div>
     </body>
 </html>
@@ -22,16 +48,104 @@
 var page = new Vue({
     el: '#page',
     data: {
-        categories: []
+        observer: null,
+        currentCategory: null,
+        categories: []    
+    },
+    computed: {
+        currentSubcategory() {
+            let visibleSubcategories = []
+            this.categories.forEach((category) => {
+                category.subcategories.forEach((subcategory) => {
+                    if (subcategory.visible) visibleSubcategories.push(subcategory)
+                })
+            })
+
+
+            let anyHeaderVisible = false
+            this.categories.forEach((category) => {
+                category.subcategories.forEach((subcategory) => {
+                    if (subcategory.headerVisible) anyHeaderVisible = true
+                })
+            })
+
+            // console.log(visibleSubcategories)
+            if (visibleSubcategories.length != 1 || anyHeaderVisible) return null
+            else return visibleSubcategories[0]
+        }
     },
     methods: {
-        
+        onElementObserved(entries) {
+            entries.forEach((entry) => {
+                let subcategory = this.lookup(entry.target.dataset.categoryId, entry.target.dataset.subcategoryId)
+                let subcategoryHeader = entry.target.dataset.subcategoryHeader ? true : false
+
+                // console.log(entry)
+
+                if (subcategoryHeader) {
+                    subcategory.headerVisible = entry.isIntersecting
+                }
+                else {
+                    subcategory.visible = entry.isIntersecting
+                }
+
+                // console.log("subcat " + subcategory.name + " vis " + subcategory.visible + " head " + subcategory.headerVisible)
+
+                // console.log(subcategoryHeader)
+                // console.log(this.currentSubcategory)
+                // console.log(entry.isIntersecting)
+
+                
+            })
+        },
+        lookup(categoryId, subcategoryId) {
+            let category = this.categories.filter((category) => category.id == categoryId)[0]
+            let subcategory = null
+            if (subcategoryId !== undefined ) {
+                subcategory = category.subcategories.filter((subcategory) => subcategory.id == subcategoryId)[0]
+                return subcategory
+            }
+            else return category
+        }
     },
     created: function () {
-        fetch("context.json")
+
+        let options = {
+            root: this.$el,
+            rootMargin: '0px',
+            // threshold: 1.0
+            threshold: 0
+        }
+        this.observer = new IntersectionObserver(this.onElementObserved, options);
+
+        fetch("./context.json")
             .then((resp) => resp.json())
-            .then((json) => page.categories = json.categories)
-    }
+            .then((json) => {
+
+                json.categories.forEach(category => {
+                    category.selected = false
+
+                    category.subcategories.forEach(subcategory => {
+                        subcategory.expanded = false
+                        subcategory.visible = null
+                        subcategory.headerVisible = null
+                    });
+                })
+
+                this.categories = json.categories
+            })
+    },
+    destroyed () {
+        // console.log("destroyed")
+    },
+    beforeUpdate() {
+        // console.log("beforeUpdate")
+        //document.querySelectorAll(".observable").forEach((element) => this.observer.unobserve(element));
+    },
+    updated() {
+        // console.log("updated")
+        document.querySelectorAll(".observable").forEach((element) => this.observer.observe(element));
+    },
 })
 
 </script>

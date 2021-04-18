@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&display=swap');
+
 body {
     overflow: hidden;
     height: 100vh;
@@ -8,11 +10,19 @@ body {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 30px 1fr 30px;
-    background-image: url("./images/bg.jpg");
+    grid-template-rows: 0px 1fr 0px;
+    background-image: url("./images/bckgrnd_img_JB_menu.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-blend-mode: lighten; */
+}
+
+.logo {
+    background-image: url("./images/logo_prova.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
 }
 
 .categories-column {
@@ -20,8 +30,72 @@ body {
     flex-direction: column;
 }
 
-.categories-column > * {
-    border: 1px solid black;
+.category-box {
+    background-image: url("./images/macro_headers_bckgrnd_gradient.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 5vh 2vw;
+    height: 15vh;
+}
+
+.category-title {
+    font-family: 'Stardos Stencil';
+    /* font-family: "Standard CT Stencil Bold"; */
+    letter-spacing: 2px;
+    font-size: 5vh;
+    color: #4f2603;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+}
+
+.category-title > * {
     flex-grow: 1;
-    margin: 50px 50px;
+}
+
+.category-title > :nth-child(2) {
+    font-size: 3vh;
+}
+
+.items-container {
+    overflow-y: scroll; 
+    height: 70vh;
+}
+
+.item-box {
+    background-image: url("./images/macro_headers_bckgrnd_gradient.jpg");
+    background-repeat: repeat-x;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 2vh 10vw;
+    height: 10vh;
+}
+
+.item-title {
+    font-family: 'Stardos Stencil';
+    /* font-family: "Standard CT Stencil Bold"; */
+    letter-spacing: 2px;
+    font-size: 3vh;
+    color: #4f2603;
+    font-weight: 400;
+}
+
+.subcategory-title {
+    font-family: 'Stardos Stencil';
+    /* font-family: "Standard CT Stencil Bold"; */
+    letter-spacing: 2px;
+    font-size: 4vh;
+    color: #4f2603;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
 }
