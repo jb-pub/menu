@@ -1,29 +1,37 @@
 <script id="entry-template" type="text/x-handlebars-template">
   <div class="main">
     <div class="logo"><img src="images/logo_prova.png"></div> 
-    <div class="menu">MENU</div>  
-    <div class="categories">
-      {{#each categories}}
+    <div class="menu">PUB & CUCINA</div>  
+    <div class="macrocategories">
+      {{#each macrocategories}}
     
-      <div class="eachcategory">
+      <div class="eachmacrocategory">
         
-        <div id="{{name}}_header"> 
-          <div>{{name}}</div>
+        <div id="{{image}}_header"> 
+          <div>{{image}}</div>
         </div>
 
-        <div id="{{name}}_items">
-               
-          {{#each items}}
-          <div>
-            {{name}} 
+        <div class="subcategories"> 
+          {{#each subcategories}}
+
+          <div class="eachsubcategory">
+
+            <div id="{{name}}_subcategory"> 
+              <div>{{name}}</div>
+            </div> 
+    
+            <div id="{{name}}_items" style= display:block >
+              <div>{{name}}</div>
+              {{#each items}}
+              <div> 
+              {{/each}}
+             </div>
           </div>
-          <div id="{{description}}_details" style="display:block">
-           <div> {{{description}}} </div>
-        </div>
-          {{/each}}
+             
+        {{/each}}
         </div>
       </div>
-      {{/each}}
+    {{/each}}
     </div>
   </div>
 </script>
@@ -44,30 +52,19 @@
   var template = Handlebars.compile(source);
 
   var context = {
-    categories: [
-      {name: "BIRRE", items: [
-          { name: "MAES PILS", details: [ 
-            {description: "Birra chiara", alc: "5°", size1: "piccola", size2: "media", price1: "3 €", price2: "5 €" }], },
-          { name: "AUGUSTINER EDELSTOFF" [
-            {description: "Birra chiara", alc: "5,6°", size1: "piccola", size2: "media", price1: "3 €" , price2: "5 €"}],},
-          { name: "LAGUNITAS IPA", details:[
-            {description: "India pale ale", alc: "6,2°", size1: "", size2: "media", price1: "", price2: "5 €" }],},
-          { name: "HACKER PSCHORR KELLER", details: [
-            {description: "Birra bionda non filtrata", alc: "5,5°", size1: "piccola", size2: "media", price1: "3 €" , price2: "5 €"}],},
-          { name: "FLOREFFE TRIPLE", details: [
-            {description: "Birra d'abbazia ambrata", alc: "7,5°", size1: "piccola", size2: "media", price1: "3,5 €", price2: "6 €" }],},
-          { name: "BLANCHE DE BRUXELLES", details: [
-            {description: "Birra blanche belga", alc: "4,5°", size1: "piccola", size2: "media", price1: "3,5 €", price2: "6 €"}],},
-        ], 
-      }, 
-      {name: "DRINK & BEVANDE", items: [{name: "MOSCOW MULE"}], },
-      {name: "BURGER & PANINI", items: [{name: "JOHN BARLEYCORN"}], }, 
-      {name: "FRITTURE"},
-
-      {name: "INSALATE"},
-      {name: "DOLCI & CAFFETTERIA"},
-    ]
+    macrocategories: [
+      {name: "JBIRRE", image: "https://github.com/jb-pub/menu/commit/964ba1f89744c9f9d36669121e790431f1e35ef8#diff-9b285b6494d3211245b9100c5ebee55a663d4bff3bc2bea9e56a7189f4a6ba13/JB.macro.headers_BIRRE_ita.jpg", 
+      subcategories: [
+      { name:"BIRRE ALLA SPINA" , 
+        items: [
+          { name: "MAES PILS", description: "Birra chiara", contains: "...", size1: "piccola", price1: "3 €", size2: "media", price2: "5 €" },],},
+      { name: "BIRRE IN BOTTIGLIA", 
+        items: [ 
+          {name: "DAURA", description: "Birra senza glutine in bottiglia", contains: "...", size1: "bottiglia", price1: "3 €", size2: " ", price2: " " },],},
+      ],},
+    ],  
   };
+
   var html = template(context);
   document.write(html)
 </script>
