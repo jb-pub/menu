@@ -1,28 +1,56 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
-
-        <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Stardos+Stencil" /> -->
-
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
         <div id="page">
             <div class="logo"></div>
             <div v-if="currentCategory">
-                <div class="category-box">
+                <div class="category-box box">
                     <!-- <div class="category-image"></div> -->
                     <div class="category-title">
-                        <span v-on:click="currentCategory.selected = false; currentCategory = null;">{{currentCategory.name}}</span>
-                        <span v-if="currentSubcategory" v-on:click="currentSubcategory.expanded = false">{{currentSubcategory.name}}</span>
+                        <!-- <div style="display: grid; grid-template-rows: 1fr 1fr;"> -->
+                        <div v-bind:class="{ 'subcategory-header': currentSubcategory }">
+                            <span v-on:click="currentCategory.selected = false; currentCategory = null;">{{currentCategory.name}}</span>
+                            <span v-if="currentSubcategory" v-on:click="currentSubcategory.expanded = false">{{currentSubcategory.name}}</span>
+                        </div>
+
                     </div>
+                    <div class="category-button minus" v-on:click="currentCategory.selected = false; currentCategory = null;"></div>
                     <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
                 </div>
                 <div class="items-container" >
                     <div v-for="subcategory in currentCategory.subcategories" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
-                        <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id" v-on:click="subcategory.expanded = !subcategory.expanded">{{subcategory.name}}</div>
-                        <div class="item-box" v-for="item in subcategory.items" v-if="subcategory.expanded">
-                            <div class="item-title">{{item.name}}</div>
+                        <div class="subcategory-box box">
+                            <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id" v-on:click="subcategory.expanded = !subcategory.expanded">{{subcategory.name}}</div>
+                            <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
+                        </div>
+                        <div class="item-box box" v-for="item in subcategory.items" v-if="subcategory.expanded">
+                            <!-- <div class="item-column"> -->
+                                <div class="item-title">{{item.name}}</div>
+                                <div class="prices-grid">
+                                    <template v-for="size in item.sizes">
+                                        <div class="item-description">{{size.label}}</div>
+                                        <div class="item-description">{{size.price}}</div>
+                                    </template>
+                                </div>
+                                <!-- <div class="item-description" style="margin-top: 1vh;">{{item.description}}</div>
+                                <div class="item-description" style="display: flex; align-items: center; margin-top: 2vh;">
+                                    <span style="margin-right: 1vh;">Contiene:</span>
+                                    <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
+                                </div> -->
+                                <div class="item-description">{{item.description}}</div>
+                                <div class="allergens-row item-description">
+                                    <div>Contiene:</div>
+                                    <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
+                                </div>
+
+                            <!-- </div> -->
+                            <!-- <div class="prices-grid"> -->
+                                <!-- <template v-for="size in item.sizes"> -->                         
+                                <!-- </template> -->
+                            <!-- </div>     -->
                         </div>
                     </div>
     
@@ -31,9 +59,10 @@
             <div class="categories-column" v-if="!currentCategory">
                 <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
                 <div v-for="category in categories">
-                    <div class="category-box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;">
+                    <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;">
                         <!-- <div class="category-image"></div> -->
                         <div class="category-title"><span>{{category.name}}</span></div>
+                        <div class="category-button plus"></div>
                         <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
                     </div>
                 </div>
@@ -41,7 +70,11 @@
             <div></div>
         </div>
     </body>
+
+    
 </html>
+
+<script src="https://unpkg.com/vue-tippy/dist/vue-tippy.min.js"></script>
 
 <script type="text/javascript">
 
@@ -50,7 +83,26 @@ var page = new Vue({
     data: {
         observer: null,
         currentCategory: null,
-        categories: []    
+        categories: [],
+        infos: {
+            "celery": { "name": "Sedano" },
+            "crustaceans": { "name": "Crostacei" },
+            "eggs": { "name": "Uova" },
+            "fish": { "name": "Pesce" },
+            "gluten": { "name": "Glutine" },
+            "herbs": { "name": "Speziato" },
+            "lupin": { "name": "Lupino" },
+            "milk": { "name": "Lattosio" },
+            "molluscs": { "name": "Molluschi" },
+            "mustard": { "name": "Senape" },
+            "peanuts": { "name": "Arachidi" },
+            "sesame": { "name": "Sesamo" },
+            "soya": { "name": "Soya" },
+            "spicyhot": { "name": "Piccante" },
+            "sulphites": { "name": "Solfiti" },
+            "tree_nuts": { "name": "Frutta a guscio" },
+            "vegan": { "name": "Vegano" },
+        }    
     },
     computed: {
         currentSubcategory() {
@@ -75,6 +127,21 @@ var page = new Vue({
         }
     },
     methods: {
+        // showTooltip(event) {
+        //     let element = event.target
+        //     // let content = element.title
+        //     tippy(element, {
+        //         trigger: "manual",
+        //         onShow: function(instance) {
+        //             setTimeout(() => {
+        //                 instance.destroy()
+        //             }, 800);
+        //         }
+        //     }).show()
+        // },
+        infoTooltip(info) {
+            return this.infos[info].name.toUpperCase()
+        },
         onElementObserved(entries) {
             entries.forEach((entry) => {
                 let subcategory = this.lookup(entry.target.dataset.categoryId, entry.target.dataset.subcategoryId)
@@ -140,12 +207,18 @@ var page = new Vue({
     },
     beforeUpdate() {
         // console.log("beforeUpdate")
-        //document.querySelectorAll(".observable").forEach((element) => this.observer.unobserve(element));
+        document.querySelectorAll(".observable").forEach((element) => this.observer.unobserve(element));
     },
     updated() {
         // console.log("updated")
         document.querySelectorAll(".observable").forEach((element) => this.observer.observe(element));
-    },
+    }
 })
+
+window.oncontextmenu = function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+};
 
 </script>
