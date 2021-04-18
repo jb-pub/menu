@@ -1,85 +1,27 @@
-.main {
-    font-family: Stencil Regular;
-    font-weight: bolder;
-    color:wheat;
-    background-image: url('images/sfondo_prova3.jpg');
-    background-position: center center;
-    background-repeat:repeat-x;
-    background-attachment:fixed;
-    }
-
-.logo {
-    /*
-    background-image: url('https://www.bellariaigeamarina.org/storage-image/foto-da-inserire/10250081_891378617644203_7977951024803197059_n.jpg');
-    background-position: center;
-    height: 300px;
+body {
+    overflow: hidden;
+    height: 100vh;
+}
+/* LAYOUT */
+#page {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 30px;
+    background-image: url("./images/bg.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 100%;
-    */
-    height: 300px;
+    background-size: cover;
+    /* background-blend-mode: lighten; */
+}
+
+.categories-column {
     display: flex;
-    justify-content: center;
-    padding: 10px; 
-    margin: 10px;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    border: none;
-    padding: 20px; 
-    margin: 20px;
-    font-weight: bold;
-    font-size:60px;
-}
-
-.macrocategory {
-background-position: center;
-background-size: contain;
-}
-
-.eachmacrocategory {
-    border: 3px color none;
-    max-height: 300px; 
-    margin: 30px;
-} 
-
-.eachmacrocategory > :nth-child(1) {
-    background-position: right;
-    background-image: url('images/arrow_point_right.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    justify-content: center;
-    display: flex; 
-}
-
-.subcategories {
-    display: flex; 
     flex-direction: column;
-   
-}   
-.eachsubcategory {
-    font-family: Serif;
-    font-size: 50px;
-    font-weight:lighter;
-    color: black;
-    display: block;
 }
 
-.eachsubcategory > :nth-child(1) {
-    background-position: right;
-    background-image: url('images/arrow_point_right.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    justify-content: center;
-    display: flex; 
-}
-
-.eachsubcategory > :nth-child(2) {
-   font-family: Serif;
-   font-size: 30px;
-   font-weight:bold;
-   color: black;
-   display: block;
+.categories-column > * {
+    border: 1px solid black;
+    flex-grow: 1;
+    margin: 50px 50px;
 }

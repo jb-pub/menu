@@ -1,0 +1,9 @@
+categories:
+  - name: CATEGORIA 1
+    items:
+      - name: ITEM 1
+      - name: ITEM 2
+  - name: CATEGORIA 2
+    items:
+      - name: ITEM 3
+      - name: ITEM 4

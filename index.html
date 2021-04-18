@@ -1,97 +1,37 @@
-<script id="entry-template" type="text/x-handlebars-template">
-  <div class="main">
-    <div class="logo"><img src="images/logo_prova.png"></div> 
-    <div class="menu">PUB & CUCINA</div>  
-    <div class="macrocategories">
-      {{#each macrocategories}}
-    
-      <div class="eachmacrocategory">
-        
-        <div id="{{image}}_header"> 
-          <div>{{image}}</div>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <div>HEADER</div>
+            <div class="categories-column">
+                <div v-for="category in categories" v-bind:category="category">
+                    {{category.name}}
+                    <div></div>
+                </div>
+            </div>
+            <div>FOOTER</div>
         </div>
-
-        <div class="subcategories"> 
-          {{#each subcategories}}
-
-          <div class="eachsubcategory">
-
-            <div id="{{name}}_subcategory"> 
-              <div>{{name}}</div>
-            </div> 
-    
-            <div id="{{name}}_items" style= display:block >
-              <div>{{name}}</div>
-              {{#each items}}
-              <div> 
-              {{/each}}
-             </div>
-          </div>
-             
-        {{/each}}
-        </div>
-      </div>
-    {{/each}}
-    </div>
-  </div>
-</script>
-
-<link rel="stylesheet" href="index.css">
-
-<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-<!-- <script>
-  // compile the template
-  var template = Handlebars.compile("Handlebars <b>{{doesWhat}}</b>");
-  // execute the compiled template and print the output to the console
-  var html = template({ doesWhat: "rocks!" });
-  document.write(html)
-</script> -->
-
-<script>
-  var source = document.getElementById("entry-template").innerHTML;
-  var template = Handlebars.compile(source);
-
-  var context = {
-    macrocategories: [
-      {name: "JBIRRE", image: "https://github.com/jb-pub/menu/commit/964ba1f89744c9f9d36669121e790431f1e35ef8#diff-9b285b6494d3211245b9100c5ebee55a663d4bff3bc2bea9e56a7189f4a6ba13/JB.macro.headers_BIRRE_ita.jpg", 
-      subcategories: [
-      { name:"BIRRE ALLA SPINA" , 
-        items: [
-          { name: "MAES PILS", description: "Birra chiara", contains: "...", size1: "piccola", price1: "3 €", size2: "media", price2: "5 €" },],},
-      { name: "BIRRE IN BOTTIGLIA", 
-        items: [ 
-          {name: "DAURA", description: "Birra senza glutine in bottiglia", contains: "...", size1: "bottiglia", price1: "3 €", size2: " ", price2: " " },],},
-      ],},
-    ],  
-  };
-
-  var html = template(context);
-  document.write(html)
-</script>
+    </body>
+</html>
 
 <script type="text/javascript">
 
-console.log("<3")
-//console.log(document.querySelectorAll("[id$=items]"));
-
-document.querySelectorAll("[id$=_items]").forEach((itemsElement) => {
-  itemsElement.style.display = "none"
-})
-
-document.querySelectorAll("[id$=_header]").forEach((headerElement) => {
-  headerElement.onclick = function () {
-    const itemsId = headerElement.id.replace("_header", "_items")
-    const itemsElement = document.getElementById(itemsId)
-    
-    if (itemsElement.style.display == "block") {
-      itemsElement.style.display = "none"
-      headerElement.style.backgroundImage = url('images/arrow_point_right.png');
+var page = new Vue({
+    el: '#page',
+    data: {
+        categories: []
+    },
+    methods: {
+        
+    },
+    created: function () {
+        fetch("context.json")
+            .then((resp) => resp.json())
+            .then((json) => page.categories = json.categories)
     }
-    else {
-      itemsElement.style.display = "block" 
-      headerElement.style.backgroundImage = url('images/arrow_point_down.png');
-    }
-  }
 })
 
 </script>
