@@ -89,6 +89,11 @@ body {
     background-position: center;
 }
 
+
+.category-small {
+    background-size: 1vh;
+}
+
 .category-button.plus {
     background-image: url("./images/plus_icon.png");
 }
@@ -99,7 +104,7 @@ body {
 
 .items-container {
     overflow-y: scroll; 
-    height: 70vh;
+    height: 75vh;
 }
 
 .subcategory-box {
