@@ -175,6 +175,15 @@ body {
     font-weight: 400;
 }
 
+.item-title-bar {
+    display: flex;
+    align-items: center; 
+}
+
+.item-title-bar > :first-child {
+    margin-right: 1vh;
+}
+
 .item-description {
     font-family: 'Stardos Stencil';
     /* font-family: "Standard CT Stencil Bold"; */
@@ -207,9 +216,6 @@ body {
     grid-template-columns: 2fr 1fr; 
     align-items: center;
     justify-items: center;
-
-
-    
 }
 
 .item-column {
