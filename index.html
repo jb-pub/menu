@@ -118,7 +118,7 @@ var page = new Vue({
         }
         this.observer = new IntersectionObserver(this.onElementObserved, options);
 
-        fetch("context.json")
+        fetch("./context.json")
             .then((resp) => resp.json())
             .then((json) => {
 
