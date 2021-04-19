@@ -107,6 +107,10 @@ body {
     height: 75vh;
 }
 
+.items-container > :last-child > div.subcategory-box:last-of-type {
+    margin-bottom: 30vh;
+}
+
 .subcategory-box {
     margin: 5vh 2vw;
     /* height: 15vh; */
