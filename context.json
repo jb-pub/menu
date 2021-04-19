@@ -1,39 +1,282 @@
 {
     "categories": [
-    {
-        "id": "BIRRE", 
-        "name": "BIRRE", 
-        "subcategories": [
-            { "name": "ALLA SPINA", "id": "birre-spina", "items": [
-                { "name": "MAES PILS", "details": [{"description": "Birra chiara", "alc": "5°", "size1": "piccola", "size2": "media", "price1": "3 €", "price2": "5 €" }] },
-                { "name": "AUGUSTINER EDELSTOFF", "details": [{"description": "Birra chiara", "alc": "5,6°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
-                { "name": "LAGUNITAS IPA", "details":[{"description": "India pale ale", "alc": "6,2°", "size1": "", "size2": "media", "price1": "", "price2": "5 €" }]},
-                { "name": "HACKER PSCHORR KELLER", "details": [{"description": "Birra bionda non filtrata", "alc": "5,5°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
-                { "name": "FLOREFFE TRIPLE", "details": [{"description": "Birra d'abbazia ambrata", "alc": "7,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €" }]},
-                { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]} 
-        
-            ]},
-            { "name": "IN BOTTIGLIA", "id": "birre-bottiglia", "items": [
-                { "name": "IN BOTTIGLIA MAES PILS", "details": [{"description": "Birra chiara", "alc": "5°", "size1": "piccola", "size2": "media", "price1": "3 €", "price2": "5 €" }] },
-                { "name": "IN BOTTIGLIA AUGUSTINER EDELSTOFF", "details": [{"description": "Birra chiara", "alc": "5,6°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
-                { "name": "IN BOTTIGLIA LAGUNITAS IPA", "details":[{"description": "India pale ale", "alc": "6,2°", "size1": "", "size2": "media", "price1": "", "price2": "5 €" }]},
-                { "name": "IN BOTTIGLIA HACKER PSCHORR KELLER", "details": [{"description": "Birra bionda non filtrata", "alc": "5,5°", "size1": "piccola", "size2": "media", "price1": "3 €" , "price2": "5 €"}]},
-                { "name": "IN BOTTIGLIA FLOREFFE TRIPLE", "details": [{"description": "Birra d'abbazia ambrata", "alc": "7,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €" }]},
-                { "name": "IN BOTTIGLIA BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "IN BOTTIGLIA BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "IN BOTTIGLIA BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "IN BOTTIGLIA BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]},
-                { "name": "IN BOTTIGLIA BLANCHE DE BRUXELLES", "details": [{"description": "Birra blanche belga", "alc": "4,5°", "size1": "piccola", "size2": "media", "price1": "3,5 €", "price2": "6 €"}]} 
-        
-            ]}
-    ]
-    },
-    { "id": "BAR", "name": "DRINK & BEVANDE", "items": [{"name": "MOSCOW MULE"}], "subcategories": [] },
-    { "id": "BURGERS", "name": "BURGER & PANINI", "items": [{"name": "JOHN BARLEYCORN"}], "subcategories": [] }, 
-    { "id": "BEVANDEeDOLCI", "name": "DOLCI & CAFFETTERIA", "subcategories": [] }
+        {
+            "id": "BIRRE", 
+            "name": "BIRRE", 
+            "subcategories": [
+                { 
+                    "name": "ALLA SPINA", 
+                    "id": "birre-spina", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+                    ]
+                },
+                { 
+                    "name": "IN BOTTIGLIA", 
+                    "id": "birre-bottiglia", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "id": "BAR", 
+            "name": "DRINK & BEVANDE", 
+            "subcategories": [
+                { 
+                    "name": "ALLA SPINA", 
+                    "id": "birre-spina", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+            
+                    ]
+                },
+                { 
+                    "name": "IN BOTTIGLIA", 
+                    "id": "birre-bottiglia", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+            
+                    ]
+                }
+            ]
+        },
+        { 
+            "id": "BURGERS",
+            "name": "BURGER & PANINI", 
+            "subcategories": [
+                { 
+                    "name": "ALLA SPINA", 
+                    "id": "birre-spina", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+            
+                    ]
+                },
+                { 
+                    "name": "IN BOTTIGLIA", 
+                    "id": "birre-bottiglia", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+            
+                    ]
+                }
+            ]
+        }, 
+        { 
+            "id": "BEVANDEeDOLCI", 
+            "name": "DOLCI & CAFFETTERIA", 
+            "subcategories": [
+                { 
+                    "name": "ALLA SPINA", 
+                    "id": "birre-spina", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+            
+                    ]
+                },
+                { 
+                    "name": "IN BOTTIGLIA", 
+                    "id": "birre-bottiglia", 
+                    "items": [
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        },
+                        { 
+                            "name": "MAES PILS", 
+                            "description": "Birra chiara 5°",
+                            "sizes": [
+                                { "label": "piccola", "price": "3 €"},
+                                { "label": "media", "price": "5 €"}
+                            ],
+                            "allergens": ["gluten"],
+                            "infos": ["vegan"]
+                        }
+            
+                    ]
+                }
+            ]
+        }
     ]
 }

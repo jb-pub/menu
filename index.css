@@ -3,6 +3,7 @@
 body {
     overflow: hidden;
     height: 100vh;
+    margin: 0px;
 }
 /* LAYOUT */
 #page {
@@ -11,7 +12,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0px 1fr 0px;
-    background-image: url("./images/bckgrnd_img_JB_menu.jpg");
+    background-image: url("./images/bckgrnd_img_JB_menu_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     /* background-blend-mode: lighten; */
@@ -30,16 +31,30 @@ body {
     flex-direction: column;
 }
 
+.box {
+    /* background-image: url("./images/macro_headers_bckgrnd_gradient_2.jpg"); */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: no-repeat;
+    background-size: contain; */
+    /* background-size: 150vh; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .category-box {
-    background-image: url("./images/macro_headers_bckgrnd_gradient.jpg");
-    background-repeat: repeat-x;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 10vw;
+    /* justify-content: center; */
 
     margin: 5vh 2vw;
     height: 15vh;
+
+    padding: 0vh 2vw;
+
+    cursor: pointer;
+
+    background-image: url("./images/bckgrnd_img_header_macrocat.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .category-title {
@@ -52,40 +67,77 @@ body {
 
     display: flex;
     align-items: center;
+
+    /* background-image: url("./images/plus_icon.png");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    background-position: right; */
 }
 
-.category-title > * {
+
+/* .category-title > * {
     flex-grow: 1;
 }
 
 .category-title > :nth-child(2) {
     font-size: 3vh;
+} */
+
+.category-button {
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    background-position: center;
+}
+
+
+.category-small {
+    background-size: 1vh;
+}
+
+.category-button.plus {
+    background-image: url("./images/plus_icon.png");
+}
+
+.category-button.minus {
+    background-image: url("./images/minus_icon.png");
 }
 
 .items-container {
     overflow-y: scroll; 
-    height: 70vh;
+    height: 75vh;
 }
 
-.item-box {
-    background-image: url("./images/macro_headers_bckgrnd_gradient.jpg");
-    background-repeat: repeat-x;
+.subcategory-box {
+    margin: 5vh 2vw;
+    /* height: 15vh; */
+
+    padding: 0vh 2vw;
+
+    display: grid;
+    grid-template-columns: 1fr 10vw;
+
+    cursor: pointer;
+
+    /* background-repeat: no-repeat, repeat-x;
+    background-size: 5vh, 100vh;
+    background-position: right, left;
+
+    background-image: url("./images/plus_icon.png"), url("./images/macro_headers_bckgrnd_gradient_2.jpg"); */
+
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    background-position-x: 50px;
+    background-position: right;
+    
+    background-image: url("./images/plus_icon.png"); */
+
+    background-image: url("./images/bckgrnd_img_header_subcat_alto.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    margin: 2vh 10vw;
-    height: 10vh;
-}
-
-.item-title {
-    font-family: 'Stardos Stencil';
-    /* font-family: "Standard CT Stencil Bold"; */
-    letter-spacing: 2px;
-    font-size: 3vh;
-    color: #4f2603;
-    font-weight: 400;
 }
 
 .subcategory-title {
@@ -97,5 +149,97 @@ body {
     font-weight: 700;
 
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+}
+
+.item-box {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
+
+    margin: 2vh 2vw;
+
+    padding: 2vh 2vw;
+
+    background-image: url("./images/bckgrnd_img_header_items.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item-box > :nth-child(2) {
+    grid-row: span 3;
+}
+
+.item-title {
+    font-family: 'Stardos Stencil';
+    /* font-family: "Standard CT Stencil Bold"; */
+    letter-spacing: 2px;
+    font-size: 3vh;
+    color: #4f2603;
+    font-weight: 400;
+}
+
+.item-title-bar {
+    display: flex;
+    align-items: center; 
+}
+
+.item-title-bar > :first-child {
+    margin-right: 1vh;
+}
+
+.item-description {
+    font-family: 'Stardos Stencil';
+    /* font-family: "Standard CT Stencil Bold"; */
+    /* letter-spacing: 2px; */
+    font-size: 2vh;
+    color: #4f2603;
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+.subcategory-header {
+    display: grid; 
+    grid-template-rows: 1fr 1fr;
+}
+
+.subcategory-header > :nth-child(1) {
+    font-size: 4vh;
+}
+
+.subcategory-header > :nth-child(2) {
+    font-size: 3vh;
+}
+
+.info-icon {
+    height: 5vh;
+}
+
+.prices-grid {
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    align-items: center;
+    justify-items: center;
+}
+
+.item-column {
+    display: flex; 
+    flex-direction: column;
+}
+
+.allergens-row {
+    display: flex; 
+    align-items: center; 
+    margin-top: 2vh;
+    font-size: 2vh;
+}
+
+.allergens-row > :first-child {
+    margin-right: 1vh;
+}
+
+.tippy-tooltip[data-size=large] {
+    padding:.375rem .75rem;
+    font-size: 2vh;
 }
