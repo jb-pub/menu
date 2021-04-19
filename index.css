@@ -52,7 +52,7 @@ body {
 
     cursor: pointer;
 
-    background-image: url("./images/bckgrnd_img_header_macrocat.jpg");
+    background-image: url("./images/bckgrnd_header_subcat.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -89,7 +89,6 @@ body {
     background-position: center;
 }
 
-
 .category-small {
     background-size: 1vh;
 }
@@ -102,13 +101,17 @@ body {
     background-image: url("./images/minus_icon.png");
 }
 
+.category-button.close {
+    background-image: url("./images/x_icon.png");
+}
+
 .items-container {
     overflow-y: scroll; 
     height: 75vh;
 }
 
 .items-container > :last-child > div.subcategory-box:last-of-type {
-    margin-bottom: 30vh;
+    margin-bottom: 25vh;
 }
 
 .subcategory-box {
@@ -138,7 +141,7 @@ body {
     
     background-image: url("./images/plus_icon.png"); */
 
-    background-image: url("./images/bckgrnd_img_header_subcat_alto.jpg");
+    background-image: url("./images/bckgrnd_header_macrocat.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -166,7 +169,7 @@ body {
 
     padding: 2vh 2vw;
 
-    background-image: url("./images/bckgrnd_img_header_items.jpg");
+    background-image: url("./images/bckgrnd_header_items.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
