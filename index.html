@@ -45,8 +45,8 @@
                                     <span style="margin-right: 1vh;">Contiene:</span>
                                     <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
                                 </div> -->
-                                <div class="item-description">{{item.description}}</div>
-                                <div class="allergens-row">
+                                <div v-if="item.description" class="item-description">{{item.description}}</div>
+                                <div v-if="item.allergens.length" class="allergens-row">
                                     <div class="item-description">Contiene:</div>
                                     <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
                                 </div>

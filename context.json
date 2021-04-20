@@ -163,7 +163,7 @@
             "name": "BURGER & PANINI", 
             "subcategories": [
                 { 
-                    "name": "ALLA SPINA", 
+                    "name": "BURGERS", 
                     "id": "birre-spina", 
                     "items": [
                         { 
@@ -190,7 +190,7 @@
                     ]
                 },
                 { 
-                    "name": "IN BOTTIGLIA", 
+                    "name": "PANINI", 
                     "id": "birre-bottiglia", 
                     "items": [
                         { 
@@ -212,6 +212,31 @@
                             ],
                             "allergens": ["gluten"],
                             "infos": ["vegan"]
+                        }
+            
+                    ]
+                },
+                { 
+                    "name": "VARIAZIONI", 
+                    "id": "burgers-variazioni", 
+                    "items": [
+                        { 
+                            "name": "BACON", 
+                            "description": "",
+                            "sizes": [
+                                { "label": "", "price": "+ 0.5 €"}
+                            ],
+                            "allergens": [],
+                            "infos": []
+                        },
+                        { 
+                            "name": "CHEESE", 
+                            "description": "",
+                            "sizes": [
+                                { "label": "", "price": "+ 0.5 €"}
+                            ],
+                            "allergens": ["milk"],
+                            "infos": []
                         }
             
                     ]
