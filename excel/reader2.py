@@ -1,7 +1,7 @@
 def find_last_items_row(ws, start):
     i = start
     while i < ws.max_row:
-        val = ws[f'C{i}'].value
+        val = ws[f'E{i}'].value
         if not val:
             return i
         i += 1
@@ -27,35 +27,37 @@ def col_next_cell(ws, col, startRow):
     return -1
 
 
-def append_subcategories(ws, bIndex, subcategories):
-    cIndex = bIndex + 1
-    subcatName = ws[f'B{bIndex}'].value
-    subcategory = { "name": subcatName, "items": [] }
+def append_subcategories(ws, cIndex, subcategories):
+    eIndex = cIndex + 1
+    subcatId = ws[f'D{cIndex}'].value
+    subcatName = ws[f'C{cIndex}'].value
+    subcategory = { "id": subcatId, "name": subcatName, "items": [] }
     subcategories.append(subcategory)
-    last_items_row = find_last_items_row(ws, cIndex)
+    last_items_row = find_last_items_row(ws, eIndex)
 
-    for i in range(cIndex, last_items_row):
-        itemName = ws[f'C{cIndex}'].value
-        itemDescr = ws[f'D{cIndex}'].value
-        menuItem = { "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": []}
+    for i in range(eIndex, last_items_row):
+        itemId = ws[f'F{eIndex}'].value
+        itemName = ws[f'E{eIndex}'].value
+        itemDescr = ws[f'G{eIndex}'].value
+        menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": []}
         subcategory["items"].append(menuItem)
-        cIndex += 1
-        # TODO Allergens vs infos
+        eIndex += 1 # ?
+
         for k in range(0, 2):
-            allergIndex = 5 + k
+            allergIndex = 8 + k
             allergValue = ws.cell(i, allergIndex).value
             if allergValue:
                 allergName = ws.cell(4, allergIndex).value
                 menuItem["infos"].append(allergName)
 
         for k in range(3, 17):
-            allergIndex = 5 + k
+            allergIndex = 8 + k
             allergValue = ws.cell(i, allergIndex).value
             if allergValue:
                 allergName = ws.cell(4, allergIndex).value
                 menuItem["allergens"].append(allergName)
 
-        firstRefCol = 18 + 4
+        firstRefCol = 18 + 7
         lastRefCol = find_last_ref_col(ws, firstRefCol)
         # print(openpyxl.utils.cell.get_column_letter(lastRefCol))
 
@@ -80,19 +82,23 @@ wb = load_workbook(filename = 'DATABASE_MENU_VENDITA.xlsx', data_only=True)
 result = { "categories": [] }
 
 for sheet in wb.sheetnames:
-    category = { "name": sheet, "subcategories": [] }
-    result["categories"].append(category)
-
-    bIndex = 4
 
     ws = wb[sheet]
 
-    append_subcategories(ws, bIndex, category["subcategories"])
+    catId = ws["B3"].value
+    catName = ws["A3"].value
+  
+    category = { "id": catId, "name": catName, "subcategories": [] }
+    result["categories"].append(category)
+
+    cIndex = 4
+
+    append_subcategories(ws, cIndex, category["subcategories"])
 
     while True:
-        bIndex = col_next_cell(ws, 2, bIndex + 1)
-        if bIndex > -1:
-            append_subcategories(ws, bIndex, category["subcategories"])
+        cIndex = col_next_cell(ws, 3, cIndex + 1)
+        if cIndex > -1:
+            append_subcategories(ws, cIndex, category["subcategories"])
         else:
             break
 
