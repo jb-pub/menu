@@ -37,11 +37,18 @@ def append_subcategories(ws, bIndex, subcategories):
     for i in range(cIndex, last_items_row):
         itemName = ws[f'C{cIndex}'].value
         itemDescr = ws[f'D{cIndex}'].value
-        menuItem = { "name": itemName, "description": itemDescr, "allergens": [], "sizes": []}
+        menuItem = { "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": []}
         subcategory["items"].append(menuItem)
         cIndex += 1
         # TODO Allergens vs infos
-        for k in range(0, 17):
+        for k in range(0, 2):
+            allergIndex = 5 + k
+            allergValue = ws.cell(i, allergIndex).value
+            if allergValue:
+                allergName = ws.cell(4, allergIndex).value
+                menuItem["infos"].append(allergName)
+
+        for k in range(3, 17):
             allergIndex = 5 + k
             allergValue = ws.cell(i, allergIndex).value
             if allergValue:
