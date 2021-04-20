@@ -76,12 +76,18 @@ for sheet in wb.sheetnames:
     category = { "name": sheet, "subcategories": [] }
     result["categories"].append(category)
 
-    # subcatIndex = 0
     bIndex = 4
 
     ws = wb[sheet]
 
     append_subcategories(ws, bIndex, category["subcategories"])
+
+    while True:
+        bIndex = col_next_cell(ws, 2, bIndex + 1)
+        if bIndex > -1:
+            append_subcategories(ws, bIndex, category["subcategories"])
+        else:
+            break
 
 yamlResult = yaml.dump(result)
 jsonResult = json.dumps(result)
