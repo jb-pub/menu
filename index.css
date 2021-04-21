@@ -162,8 +162,10 @@ body {
 .item-box {
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3fr;
+    grid-template-columns: 2fr 1fr;
+
+    /* align-items: center;
+    justify-content: center; */
 
     margin: 2vh 2vw;
 
@@ -174,9 +176,9 @@ body {
     background-size: cover;
 }
 
-.item-box > :nth-child(2) {
+/* .item-box > :nth-child(2) {
     grid-row: span 3;
-}
+} */
 
 .item-title {
     font-family: 'Stardos Stencil';
@@ -197,13 +199,25 @@ body {
 }
 
 .item-description {
-    font-family: 'Stardos Stencil';
-    /* font-family: "Standard CT Stencil Bold"; */
-    /* letter-spacing: 2px; */
-    font-size: 2vh;
+    /* font-family: 'Stardos Stencil';
+
+    font-size: 1vh;
     color: #4f2603;
-    font-weight: 100;
-    white-space: nowrap;
+    font-weight: 100; */
+    font-size: 1.5vh; 
+    font-family: 'Stardos Stencil';
+    font-weight: lighter;
+}
+
+.item-price {
+    /* font-family: 'Stardos Stencil';
+
+    font-size: 1vh;
+    color: #4f2603;
+    font-weight: 100; */
+    font-size: 2vh; 
+    font-family: 'Stardos Stencil';
+    font-weight: lighter;
 }
 
 .subcategory-header {
@@ -224,10 +238,15 @@ body {
 }
 
 .prices-grid {
-    display: grid; 
-    grid-template-columns: 2fr 1fr; 
-    align-items: center;
-    justify-items: center;
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* justify-content: center; */
+    /* align-items: center;
+    justify-items: center; */
 }
 
 .item-column {
