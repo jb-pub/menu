@@ -4,6 +4,41 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
+
+        <div class="home">
+            <div>BENVENUTO</div>
+
+            <div style="background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 100%; height: auto; flex-grow: 2;"></div>
+
+            <div onclick="closeHome()">VAI AL MENU</div>
+
+            <div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza, indicati nel menù con le icone seguenti:</div>
+            <div>
+                <div>Glutine</div>
+                <div>Arachidi</div>
+                <div>Sedano</div>
+                <div>Senape</div>
+                <div>Pesce</div>
+                <div>Soia</div>
+                <div>Solfiti</div>
+                <div>Uova</div>
+                <div>Latte</div>
+                <div>Frutta a guscio</div>
+                <div>Molluschi</div>
+                <div>Crostacei</div>
+                <div>Sesamo</div>
+                <div>Lupino</div>
+                <div>Piccante</div>
+                <div>Vegan</div>
+            </div>
+            <div>Restiamo a disposizione per ulteriori informazioni.</div>
+            <div style="flex-direction: column;">
+                <div>Le preparazioni contrassegnate da "*" e "**" indicano</div>
+                <div>* prodotto congelato all'origine</div>
+                <div>** prodotto congelato in loco con abbattimento rapido</div>
+            </div>
+        </div>
+
         <div id="page">
             <div class="logo"></div>
             <div v-if="currentCategory">
@@ -240,5 +275,9 @@ window.oncontextmenu = function(event) {
         event.stopPropagation();
         return false;
 };
+
+function closeHome() {
+    document.getElementsByClassName("home").item(0).style.display = 'none'
+}
 
 </script>
