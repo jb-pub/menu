@@ -6,36 +6,108 @@
     <body>
 
         <div class="home">
-            <div>BENVENUTO</div>
+            <div class="home-content">
+            
+                <!-- <div class="title">BENVENUTO</div> -->
 
-            <div style="background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 100%; height: auto; flex-grow: 2;"></div>
+                <div style="background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 100%; height: auto; flex-grow: 3;"></div>
 
-            <div onclick="closeHome()">VAI AL MENU</div>
+                <div class="title" onclick="closeHome()">VAI AL MENU</div>
 
-            <div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza, indicati nel menù con le icone seguenti:</div>
-            <div>
-                <div>Glutine</div>
-                <div>Arachidi</div>
-                <div>Sedano</div>
-                <div>Senape</div>
-                <div>Pesce</div>
-                <div>Soia</div>
-                <div>Solfiti</div>
-                <div>Uova</div>
-                <div>Latte</div>
-                <div>Frutta a guscio</div>
-                <div>Molluschi</div>
-                <div>Crostacei</div>
-                <div>Sesamo</div>
-                <div>Lupino</div>
-                <div>Piccante</div>
-                <div>Vegan</div>
-            </div>
-            <div>Restiamo a disposizione per ulteriori informazioni.</div>
-            <div style="flex-direction: column;">
-                <div>Le preparazioni contrassegnate da "*" e "**" indicano</div>
-                <div>* prodotto congelato all'origine</div>
-                <div>** prodotto congelato in loco con abbattimento rapido</div>
+                <div class="text"><div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza, indicati nel menù con le icone seguenti:</div></div>
+                <div class="text" style="display: flex; flex-wrap:wrap; gap: 3vmin;">
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_celery.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_crustaceans.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_eggs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_fish.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_gluten.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_herbs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_lupin.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_milk.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_molluscs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_mustard.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_peanuts.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_sesame.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_soya.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_spicyhot.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_sulphites.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_tree_nuts.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_vegan.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+
+                    <!-- <div>Glutine</div>
+                    <div>Arachidi</div>
+                    <div>Sedano</div>
+                    <div>Senape</div>
+                    <div>Pesce</div>
+                    <div>Soia</div>
+                    <div>Solfiti</div>
+                    <div>Uova</div>
+                    <div>Latte</div>
+                    <div>Frutta a guscio</div>
+                    <div>Molluschi</div>
+                    <div>Crostacei</div>
+                    <div>Sesamo</div>
+                    <div>Lupino</div>
+                    <div>Piccante</div>
+                    <div>Vegan</div> -->
+                </div>
+                <div class="text">Restiamo a disposizione per ulteriori informazioni.</div>
+                <div class="text-small" style="flex-direction: column;">
+                    <div>Le preparazioni contrassegnate da "*" e "**" indicano</div>
+                    <div>* prodotto congelato all'origine</div>
+                    <div>** prodotto congelato in loco con abbattimento rapido</div>
+                </div>
             </div>
         </div>
 
