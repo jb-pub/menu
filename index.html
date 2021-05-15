@@ -4,6 +4,113 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
+
+        <div class="home">
+            <div class="home-content">
+            
+                <!-- <div class="title">BENVENUTO</div> -->
+
+                <div style="background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 100%; height: auto; flex-grow: 3;"></div>
+
+                <div class="title" style="cursor: pointer;" onclick="closeHome()">VAI AL MENU</div>
+
+                <div class="text"><div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza, indicati nel menù con le icone seguenti:</div></div>
+                <div class="text" style="display: flex; flex-wrap:wrap; gap: 3vmin;">
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_celery.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Cereali</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_crustaceans.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Crostacei</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_eggs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Uova</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_fish.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Pesce</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_gluten.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Glutine</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_herbs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Spezie</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_lupin.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Lupini</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_milk.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Uova</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_molluscs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Molluschi</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_mustard.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Senape</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_peanuts.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Arachidi</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_sesame.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Sesamo</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_soya.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Soia</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_spicyhot.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Piccante</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_sulphites.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Solfiti</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_tree_nuts.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Frutta a guscio</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_vegan.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Vegan</div>
+                    </div>
+
+                    <!-- <div>Glutine</div>
+                    <div>Arachidi</div>
+                    <div>Sedano</div>
+                    <div>Senape</div>
+                    <div>Pesce</div>
+                    <div>Soia</div>
+                    <div>Solfiti</div>
+                    <div>Uova</div>
+                    <div>Latte</div>
+                    <div>Frutta a guscio</div>
+                    <div>Molluschi</div>
+                    <div>Crostacei</div>
+                    <div>Sesamo</div>
+                    <div>Lupino</div>
+                    <div>Piccante</div>
+                    <div>Vegan</div> -->
+                </div>
+                <div class="text">Restiamo a disposizione per ulteriori informazioni.</div>
+                <div class="text-small" style="flex-direction: column;">
+                    <div>Le preparazioni contrassegnate da "*" e "**" indicano</div>
+                    <div>* prodotto congelato all'origine</div>
+                    <div>** prodotto congelato in loco con abbattimento rapido</div>
+                </div>
+            </div>
+        </div>
+
         <div id="page">
             <div class="logo"></div>
             <div v-if="currentCategory">
@@ -14,8 +121,8 @@
                         <div v-bind:class="{ 'subcategory-header': currentSubcategory }">
                             <div v-on:click="currentCategory.selected = false; currentCategory = null;">{{currentCategory.name}}</div>
                             <div style="display: grid; grid-template-columns: 10vw 1fr; align-content: center;" v-if="currentSubcategory">
-                                <div style="margin-right: 1vw;" class="category-button close"></div>
-                                <div v-on:click="currentSubcategory.expanded = false">{{currentSubcategory.name}}</div>
+                                <div v-on:click="currentSubcategory.expanded = false" style="margin-right: 1vw;" class="category-button close"></div>
+                                <div>{{currentSubcategory.name}}</div>
                             </div>
                         </div>
                     </div>
@@ -26,7 +133,7 @@
                     <div v-for="subcategory in currentCategory.subcategories" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
                         <div class="subcategory-box box">
                             <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id" v-on:click="subcategory.expanded = !subcategory.expanded">{{subcategory.name}}</div>
-                            <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
+                            <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}" v-on:click="subcategory.expanded = !subcategory.expanded"></div>
                         </div>
                         <div class="item-box box" v-for="item in subcategory.items" v-if="subcategory.expanded">
                             <!-- <div class="item-column"> -->
@@ -50,7 +157,7 @@
                                 <div class="prices-grid" >
                                     <div v-for="size in item.sizes" style="display: grid; grid-template-columns: 1fr 1fr; flex-grow: 1; align-items: center; justify-items: center; align-content: center; justify-content: center;">
                                         <div style="flex-grow: 1;" class="item-price">{{size.label}}</div>
-                                        <div style="flex-grow: 1;" class="item-price">{{size.price}}</div>
+                                        <div style="flex-grow: 1;" class="item-price">{{size.price}} €</div>
                                     </div>
                                     <!-- <template v-for="size in item.sizes"> -->
                                         <!-- <div class="item-description" style="white-space: nowrap;">{{size.label}}</div>
@@ -227,7 +334,9 @@ var page = new Vue({
     },
     beforeUpdate() {
         // console.log("beforeUpdate")
-        document.querySelectorAll(".observable").forEach((element) => this.observer.unobserve(element));
+
+        // TODO Removed since currently is bugged (behavior stops working after section is changed)
+        // document.querySelectorAll(".observable").forEach((element) => this.observer.unobserve(element));
     },
     updated() {
         // console.log("updated")
@@ -240,5 +349,9 @@ window.oncontextmenu = function(event) {
         event.stopPropagation();
         return false;
 };
+
+function closeHome() {
+    document.getElementsByClassName("home").item(0).style.display = 'none'
+}
 
 </script>
