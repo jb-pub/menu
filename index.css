@@ -61,7 +61,16 @@
 }
 
 .home-content .title {
-    font-size: 4vh
+    font-size: 2.5vh;
+    background-image: url(images/bckgrnd_header_macrocat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0 4vw;
+}
+
+.home-content .title-big {
+    font-size: 5vh
 }
 
 
@@ -86,13 +95,13 @@ body {
     /* background-blend-mode: lighten; */
 }
 
-.logo {
+/* .logo {
     background-image: url("./images/logo_prova.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     height: 100%;
-}
+} */
 
 .categories-column {
     display: flex;
@@ -223,7 +232,7 @@ body {
     color: #4f2603;
     font-weight: 700;
 
-    display: flex;
+    /* display: flex; */
     /* justify-content: center; */
 }
 

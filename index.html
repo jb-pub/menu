@@ -10,15 +10,17 @@
             
                 <!-- <div class="title">BENVENUTO</div> -->
 
-                <div style="background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 100%; height: auto; flex-grow: 3;"></div>
+                <div style="background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 100%; height: auto; flex-grow: 6;"></div>
 
+                <div class="title-big">BENVENUTO!</div>
+                
                 <div class="title" style="cursor: pointer;" onclick="closeHome()">VAI AL MENU</div>
 
                 <div class="text"><div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza, indicati nel menù con le icone seguenti:</div></div>
                 <div class="text" style="display: flex; flex-wrap:wrap; gap: 3vmin;">
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_celery.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
-                        <div class="text-small">Cereali</div>
+                        <div class="text-small">Sedano</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_crustaceans.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
@@ -37,16 +39,12 @@
                         <div class="text-small">Glutine</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
-                        <div style="background-image: url(./images/allergens_herbs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
-                        <div class="text-small">Spezie</div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_lupin.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
-                        <div class="text-small">Lupini</div>
+                        <div class="text-small">Lupino</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_milk.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
-                        <div class="text-small">Uova</div>
+                        <div class="text-small">Lattosio</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_molluscs.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
@@ -69,16 +67,16 @@
                         <div class="text-small">Soia</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
-                        <div style="background-image: url(./images/allergens_spicyhot.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
-                        <div class="text-small">Piccante</div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_sulphites.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
                         <div class="text-small">Solfiti</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_tree_nuts.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
                         <div class="text-small">Frutta a guscio</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
+                        <div style="background-image: url(./images/allergens_spicyhot.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
+                        <div class="text-small">Piccante</div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_vegan.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
@@ -116,12 +114,12 @@
             <div v-if="currentCategory">
                 <div class="category-box box">
                     <!-- <div class="category-image"></div> -->
-                    <div class="category-title">
+                    <div class="category-title" v-on:click="currentCategory.selected = false; currentCategory = null;">
                         <!-- <div style="display: grid; grid-template-rows: 1fr 1fr;"> -->
                         <div v-bind:class="{ 'subcategory-header': currentSubcategory }">
-                            <div v-on:click="currentCategory.selected = false; currentCategory = null;">{{currentCategory.name}}</div>
+                            <div>{{currentCategory.name}}</div>
                             <div style="display: grid; grid-template-columns: 10vw 1fr; align-content: center;" v-if="currentSubcategory">
-                                <div v-on:click="currentSubcategory.expanded = false" style="margin-right: 1vw;" class="category-button close"></div>
+                                <div v-on:click.stop="currentSubcategory.expanded = false" style="margin-right: 1vw;" class="category-button close"></div>
                                 <div>{{currentSubcategory.name}}</div>
                             </div>
                         </div>
@@ -131,53 +129,55 @@
                 </div>
                 <div class="items-container">
                     <div v-for="subcategory in currentCategory.subcategories" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
-                        <div class="subcategory-box box">
-                            <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id" v-on:click="subcategory.expanded = !subcategory.expanded">{{subcategory.name}}</div>
-                            <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}" v-on:click="subcategory.expanded = !subcategory.expanded"></div>
+                        <div class="subcategory-box box" v-on:click="subcategory.expanded  ? subcategory.expanded = false : subcategory.expanded = true">
+                            <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">{{subcategory.name}}</div>
+                            <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
                         </div>
-                        <div class="item-box box" v-for="item in subcategory.items" v-if="subcategory.expanded">
-                            <!-- <div class="item-column"> -->
+                        <div v-if="subcategory.expanded">
+                            <div class="item-box box" v-for="item in subcategory.items">
+                                <!-- <div class="item-column"> -->
 
-                                <div style="display: flex; flex-direction: column; padding-right: 6vw;">
-                                
-                                    <div class="item-title-bar">
-                                        <div class="item-title">{{item.name}}</div>
-                                        <img :content="infoTooltip(info)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="info in item.infos" v-bind:src="'images/allergens_' + info + '.png'">
+                                    <div style="display: flex; flex-direction: column; padding-right: 6vw;">
+                                    
+                                        <div class="item-title-bar">
+                                            <div class="item-title">{{item.name}}</div>
+                                            <img :content="infoTooltip(info)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="info in item.infos" v-bind:src="'images/allergens_' + info + '.png'">
+                                        </div>
+
+                                        <div class="item-description" style="text-align:justify; text-justify: newspaper;">{{item.description}}</div>
+
+                                        <div class="allergens-row">
+                                            <div v-if="item.allergens.length">Contiene:</div>
+                                            <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
+                                        </div>
+                                    
                                     </div>
 
-                                    <div class="item-description" style="text-align:justify; text-justify: newspaper;">{{item.description}}</div>
+                                    <div class="prices-grid" >
+                                        <div v-for="size in item.sizes" style="display: grid; grid-template-columns: 1fr 1fr; flex-grow: 1; align-items: center; justify-items: center; align-content: center; justify-content: center;">
+                                            <div style="flex-grow: 1;" class="item-price">{{size.label}}</div>
+                                            <div style="flex-grow: 1;" class="item-price">{{size.price}} €</div>
+                                        </div>
+                                        <!-- <template v-for="size in item.sizes"> -->
+                                            <!-- <div class="item-description" style="white-space: nowrap;">{{size.label}}</div>
+                                            <div class="item-description" style="white-space: nowrap;">{{size.price}}</div> -->
+                                            <!-- <div class="item-price">{{size.label}}</div>
+                                            <div class="item-price">{{size.price}}</div> -->
+                                        <!-- </template> -->
+                                    </div>
 
-                                    <div class="allergens-row">
-                                        <div v-if="item.allergens.length">Contiene:</div>
+                                    <!-- <div class="item-description" style="margin-top: 1vh;">{{item.description}}</div>
+                                    <div class="item-description" style="display: flex; align-items: center; margin-top: 2vh;">
+                                        <span style="margin-right: 1vh;">Contiene:</span>
                                         <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
-                                    </div>
-                                
-                                </div>
+                                    </div> -->
 
-                                <div class="prices-grid" >
-                                    <div v-for="size in item.sizes" style="display: grid; grid-template-columns: 1fr 1fr; flex-grow: 1; align-items: center; justify-items: center; align-content: center; justify-content: center;">
-                                        <div style="flex-grow: 1;" class="item-price">{{size.label}}</div>
-                                        <div style="flex-grow: 1;" class="item-price">{{size.price}} €</div>
-                                    </div>
-                                    <!-- <template v-for="size in item.sizes"> -->
-                                        <!-- <div class="item-description" style="white-space: nowrap;">{{size.label}}</div>
-                                        <div class="item-description" style="white-space: nowrap;">{{size.price}}</div> -->
-                                        <!-- <div class="item-price">{{size.label}}</div>
-                                        <div class="item-price">{{size.price}}</div> -->
+                                <!-- </div> -->
+                                <!-- <div class="prices-grid"> -->
+                                    <!-- <template v-for="size in item.sizes"> -->                         
                                     <!-- </template> -->
-                                </div>
-
-                                <!-- <div class="item-description" style="margin-top: 1vh;">{{item.description}}</div>
-                                <div class="item-description" style="display: flex; align-items: center; margin-top: 2vh;">
-                                    <span style="margin-right: 1vh;">Contiene:</span>
-                                    <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
-                                </div> -->
-
-                            <!-- </div> -->
-                            <!-- <div class="prices-grid"> -->
-                                <!-- <template v-for="size in item.sizes"> -->                         
-                                <!-- </template> -->
-                            <!-- </div>     -->
+                                <!-- </div>     -->
+                            </div>
                         </div>
                     </div>
     
@@ -186,7 +186,8 @@
             <div class="categories-column" v-if="!currentCategory">
                 <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
                 <div v-for="category in categories">
-                    <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;">
+                    <!-- <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;"> -->
+                        <div class="category-box box" v-on:click="category.selected = true; currentCategory = category;">
                         <!-- <div class="category-image"></div> -->
                         <div class="category-title"><span>{{category.name}}</span></div>
                         <div class="category-button plus"></div>

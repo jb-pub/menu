@@ -68,7 +68,7 @@ def append_subcategories(ws, cIndex, subcategories):
                 "price": ws.cell(i, k + 2).value
             }
 
-            if ref["ref"]:
+            if ref["ref"] or ref["label"] or ref["price"]:
                 menuItem["sizes"].append(ref)
 
 import openpyxl
