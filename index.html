@@ -128,13 +128,13 @@
                     <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
                 </div>
                 <div class="items-container">
-                    <div v-for="subcategory in currentCategory.subcategories" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
+                    <div v-for="subcategory in currentCategory.subcategories" v-if="!stopSubcats.includes(subcategory.id)" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
                         <div class="subcategory-box box" v-on:click="subcategory.expanded  ? subcategory.expanded = false : subcategory.expanded = true">
                             <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">{{subcategory.name}}</div>
                             <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
                         </div>
                         <div v-if="subcategory.expanded">
-                            <div class="item-box box" v-for="item in subcategory.items">
+                            <div class="item-box box" v-for="item in subcategory.items" v-if="!stopItems.includes(item.id)">
                                 <!-- <div class="item-column"> -->
 
                                     <div style="display: flex; flex-direction: column; padding-right: 6vw;">
@@ -225,12 +225,22 @@ var page = new Vue({
             "mustard": { "name": "Senape" },
             "peanuts": { "name": "Arachidi" },
             "sesame": { "name": "Sesamo" },
-            "soya": { "name": "Soya" },
+            "soya": { "name": "Soia" },
             "spicyhot": { "name": "Piccante" },
             "sulphites": { "name": "Solfiti" },
             "tree_nuts": { "name": "Frutta a guscio" },
             "vegan": { "name": "Vegan" },
-        }    
+        },
+        stopSubcats: [
+            "variations",
+            "aperitivo"
+        ],
+        stopItems: [
+            "floreffe",
+            "beamish",
+            "slalom",
+            "pecos"
+        ]
     },
     computed: {
         currentSubcategory() {
