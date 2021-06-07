@@ -1,0 +1,52 @@
+Item id:
+floreffe
+beamish
+slalom
+pecos
+
+*subcat id:
+variations 
+aperitivo* OPPURE
+
+Item ids:
+KIA
+ANG
+SCT
+P_IND
+P_ARA
+P_NAT
+CHK
+WUR
+BAC
+CHD
+FOS
+FET
+CIP
+SCA
+CET
+POM
+INS
+V_COT
+V_CRU
+CHI
+AVO
+TZA
+MNT
+SDIG
+MAY
+KET
+BBQ
+*
+
+* (subcat id: aperitivo)
+mini_grill
+mini_picc
+mini_eso
+classic_grill
+classic_picc
+classic_eso
+maxi_grill
+maxi_picc
+maxi_eso
+*
+
