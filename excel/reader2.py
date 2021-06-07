@@ -35,13 +35,18 @@ def append_subcategories(ws, cIndex, subcategories):
     subcategories.append(subcategory)
     last_items_row = find_last_items_row(ws, eIndex)
 
-    for i in range(eIndex, last_items_row):
+    #print (subcatName)
+    #print (last_items_row)
+
+    for i in range(eIndex, last_items_row + 1):
         itemId = ws[f'F{eIndex}'].value
         itemName = ws[f'E{eIndex}'].value
         itemDescr = ws[f'G{eIndex}'].value
         menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": []}
         subcategory["items"].append(menuItem)
         eIndex += 1 # ?
+
+        #print(itemName)
 
         for k in range(0, 2):
             allergIndex = 8 + k
