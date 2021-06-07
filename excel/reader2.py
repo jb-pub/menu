@@ -5,7 +5,7 @@ def find_last_items_row(ws, start):
         if not val:
             return i
         i += 1
-    return ws.max_row
+    return ws.max_row + 1
 
 def find_last_ref_col(ws, start):
     i = start
@@ -38,7 +38,7 @@ def append_subcategories(ws, cIndex, subcategories):
     #print (subcatName)
     #print (last_items_row)
 
-    for i in range(eIndex, last_items_row + 1):
+    for i in range(eIndex, last_items_row):
         itemId = ws[f'F{eIndex}'].value
         itemName = ws[f'E{eIndex}'].value
         itemDescr = ws[f'G{eIndex}'].value
