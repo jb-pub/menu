@@ -5,7 +5,7 @@ def find_last_items_row(ws, start):
         if not val:
             return i
         i += 1
-    return ws.max_row
+    return ws.max_row + 1
 
 def find_last_ref_col(ws, start):
     i = start
@@ -35,6 +35,9 @@ def append_subcategories(ws, cIndex, subcategories):
     subcategories.append(subcategory)
     last_items_row = find_last_items_row(ws, eIndex)
 
+    #print (subcatName)
+    #print (last_items_row)
+
     for i in range(eIndex, last_items_row):
         itemId = ws[f'F{eIndex}'].value
         itemName = ws[f'E{eIndex}'].value
@@ -42,6 +45,8 @@ def append_subcategories(ws, cIndex, subcategories):
         menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": []}
         subcategory["items"].append(menuItem)
         eIndex += 1 # ?
+
+        #print(itemName)
 
         for k in range(0, 2):
             allergIndex = 8 + k
