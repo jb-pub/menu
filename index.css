@@ -28,7 +28,7 @@ a.nostyle:visited {
     font-family: 'Stardos Stencil';
     letter-spacing: 2px;
 
-    color: #4f2603;
+    /* color: #4f2603; */
 
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@ body {
     /* font-family: "Standard CT Stencil Bold"; */
     letter-spacing: 2px;
     font-size: 5vh;
-    color: #4f2603;
+    /* color: #4f2603; */
     font-weight: 700;
 
     display: flex;
@@ -246,7 +246,7 @@ body {
     /* font-family: "Standard CT Stencil Bold"; */
     letter-spacing: 2px;
     font-size: 4vh;
-    color: #4f2603;
+    /* color: #4f2603; */
     font-weight: 700;
 
     /* display: flex; */
@@ -279,7 +279,7 @@ body {
     /* font-family: "Standard CT Stencil Bold"; */
     letter-spacing: 2px;
     font-size: 3vh;
-    color: #4f2603;
+    /* color: #4f2603; */
     font-weight: 400;
 }
 
