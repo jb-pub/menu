@@ -115,7 +115,7 @@
             </div>
         </div>
 
-        <div id="page">
+        <div id="page" style="position:fixed; left: 0; top: 0; visibility: hidden;">
             <div class="logo"></div>
             <div v-if="currentCategory">
                 <div class="category-box box">
@@ -367,8 +367,18 @@ window.oncontextmenu = function(event) {
         return false;
 };
 
+window.onbeforeunload = function() { return "Your work will be lost."; };
+
+window.addEventListener('popstate', function (event)
+{
+    document.getElementsByClassName("home").item(0).style.visibility='visible'
+    document.getElementById("page").style.visibility='hidden'
+});
+
 function closeHome() {
-    document.getElementsByClassName("home").item(0).style.display = 'none'
+    document.getElementsByClassName("home").item(0).style.visibility='hidden'
+    document.getElementById("page").style.visibility='visible'
+    history.pushState(null, document.title, location.href);
 }
 
 </script>
