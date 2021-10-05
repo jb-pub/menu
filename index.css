@@ -78,7 +78,8 @@ body {
     overflow: hidden;
     height: 100vh;
     margin: 0px;
-    background-image: url("./images/bckgrnd_img_JB_menu_2.jpg");
+    /*background-image: url("./images/bckgrnd_img_JB_menu_2.jpg");*/
+    background-image: url("./images/sfondo_verde.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
