@@ -1,3 +1,11 @@
+import openpyxl
+import yaml
+import json
+
+from openpyxl import load_workbook
+
+from openpyxl.utils import get_column_letter
+
 def find_last_items_row(ws, start):
     i = start
     while i < ws.max_row:
@@ -38,11 +46,15 @@ def append_subcategories(ws, cIndex, subcategories):
     #print (subcatName)
     #print (last_items_row)
 
+    # Assuming same ref colums for all items (possibly empty)
+    firstRefCol = 18 + 7
+    lastRefCol = find_last_ref_col(ws, firstRefCol)
+
     for i in range(eIndex, last_items_row):
         itemId = ws[f'F{eIndex}'].value
         itemName = ws[f'E{eIndex}'].value
         itemDescr = ws[f'G{eIndex}'].value
-        menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": []}
+        menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": [], "ingredients": []}
         subcategory["items"].append(menuItem)
         eIndex += 1 # ?
 
@@ -62,8 +74,6 @@ def append_subcategories(ws, cIndex, subcategories):
                 allergName = ws.cell(4, allergIndex).value
                 menuItem["allergens"].append(allergName)
 
-        firstRefCol = 18 + 7
-        lastRefCol = find_last_ref_col(ws, firstRefCol)
         # print(openpyxl.utils.cell.get_column_letter(lastRefCol))
 
         for k in range(firstRefCol, lastRefCol, 3):
@@ -76,11 +86,13 @@ def append_subcategories(ws, cIndex, subcategories):
             if ref["ref"] or ref["label"] or ref["price"]:
                 menuItem["sizes"].append(ref)
 
-import openpyxl
-import yaml
-import json
+        if lastRefCol < ws.max_column:
+            for k in range(lastRefCol, ws.max_column + 1):
+                ingVal = ws.cell(i, k).value
+                if ingVal:
+                    ingLabel = ws.cell(4, k).value
+                    menuItem["ingredients"].append(ingLabel)
 
-from openpyxl import load_workbook
 
 wb = load_workbook(filename = 'DATABASE_MENU_VENDITA.xlsx', data_only=True)
 
@@ -92,9 +104,18 @@ for sheet in wb.sheetnames:
 
     catId = ws["B3"].value
     catName = ws["A3"].value
+    catPop = ws["A4"].value
   
-    category = { "id": catId, "name": catName, "subcategories": [] }
+    category = { "id": catId, "name": catName, "subcategories": [], "ingredients": [], "pop": catPop }
     result["categories"].append(category)
+
+    # Assuming same ref colums for all items (possibly empty)
+    firstRefCol = 18 + 7
+    lastRefCol = find_last_ref_col(ws, firstRefCol)
+    if lastRefCol < ws.max_column:
+        for k in range(lastRefCol, ws.max_column + 1):
+            ingLabel = ws.cell(4, k).value
+            category["ingredients"].append(ingLabel)
 
     cIndex = 4
 
