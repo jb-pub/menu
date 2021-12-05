@@ -5,6 +5,14 @@
     </head>
     <body>
 
+        <div class="popup">
+            <div class="popup-content">PARTY DI CAPODANNO 2022</div>
+            <a class="nostyle" href="./images/capodanno21-full.png" target="_blank">
+                <div class="popup-button">SCOPRI DI PIÚ</div>
+            </a>
+        </div>
+
+
         <div class="home">
             <div class="home-content">
             
@@ -16,7 +24,11 @@
                 
                 <div class="title" style="cursor: pointer;" onclick="closeHome()">VAI AL MENU</div>
 
-                <div class="text"><div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza, indicati nel menù con le icone seguenti:</div></div>
+                <br/>
+
+                <a class="nostyle title" style="cursor: pointer;" href="./files/MENU-2021-REV5.pdf" download="menu-jb.pdf">SCARICA PDF</a>
+
+                <div class="text"><div>Prima di ordinare, verifica attentamente l'elenco degli allergeni e degli ingredienti in ciascuna pietanza:</div></div>
                 <div class="text" style="display: flex; flex-wrap:wrap; gap: 3vmin;">
                     <div style="display: flex; flex-direction: column; gap: 1vmax; align-items: center; align-content: center; justify-content: center; justify-items: center;">
                         <div style="background-image: url(./images/allergens_celery.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 3vh; height: 3vh;"></div>
@@ -109,7 +121,7 @@
             </div>
         </div>
 
-        <div id="page">
+        <div id="page" style="position:fixed; left: 0; top: 0; visibility: hidden;">
             <div class="logo"></div>
             <div v-if="currentCategory">
                 <div class="category-box box">
@@ -239,7 +251,10 @@ var page = new Vue({
             "floreffe",
             "beamish",
             "slalom",
-            "pecos"
+            "pecos",
+            "hp weizen",
+            "pandora",
+            "limited edition"
         ]
     },
     computed: {
@@ -361,8 +376,18 @@ window.oncontextmenu = function(event) {
         return false;
 };
 
+window.onbeforeunload = function() { return "Your work will be lost."; };
+
+window.addEventListener('popstate', function (event)
+{
+    document.getElementsByClassName("home").item(0).style.visibility='visible'
+    document.getElementById("page").style.visibility='hidden'
+});
+
 function closeHome() {
-    document.getElementsByClassName("home").item(0).style.display = 'none'
+    document.getElementsByClassName("home").item(0).style.visibility='hidden'
+    document.getElementById("page").style.visibility='visible'
+    history.pushState(null, document.title, location.href);
 }
 
 </script>
