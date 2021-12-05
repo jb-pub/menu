@@ -382,12 +382,16 @@ window.addEventListener('popstate', function (event)
 {
     document.getElementsByClassName("home").item(0).style.visibility='visible'
     document.getElementById("page").style.visibility='hidden'
+
+    document.getElementsByClassName("popup").item(0).style.display='block'
 });
 
 function closeHome() {
     document.getElementsByClassName("home").item(0).style.visibility='hidden'
     document.getElementById("page").style.visibility='visible'
     history.pushState(null, document.title, location.href);
+
+    document.getElementsByClassName("popup").item(0).style.display='none'
 }
 
 </script>
