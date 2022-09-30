@@ -55,7 +55,8 @@ def append_subcategories(ws, cIndex, subcategories):
         itemId = ws[f'F{eIndex}'].value
         itemName = ws[f'E{eIndex}'].value
         itemDescr = ws[f'G{eIndex}'].value
-        menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "allergens": [], "infos": [], "sizes": [], "ingredients": []}
+        itemHidden = ws[f'Y{cIndex}'].value == 1
+        menuItem = { "id": itemId, "name": itemName, "description": itemDescr, "hidden": itemHidden, "allergens": [], "infos": [], "sizes": [], "ingredients": []}
         subcategory["items"].append(menuItem)
         eIndex += 1 # ?
 
