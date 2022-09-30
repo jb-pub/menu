@@ -39,7 +39,8 @@ def append_subcategories(ws, cIndex, subcategories):
     eIndex = cIndex + 1
     subcatId = ws[f'D{cIndex}'].value
     subcatName = ws[f'C{cIndex}'].value
-    subcategory = { "id": subcatId, "name": subcatName, "items": [] }
+    subcatHidden = ws[f'Y{cIndex}'].value == 1
+    subcategory = { "id": subcatId, "name": subcatName, "hidden": subcatHidden, "items": [] }
     subcategories.append(subcategory)
     last_items_row = find_last_items_row(ws, eIndex)
 
@@ -47,7 +48,7 @@ def append_subcategories(ws, cIndex, subcategories):
     #print (last_items_row)
 
     # Assuming same ref colums for all items (possibly empty)
-    firstRefCol = 18 + 7
+    firstRefCol = 19 + 7
     lastRefCol = find_last_ref_col(ws, firstRefCol)
 
     for i in range(eIndex, last_items_row):
@@ -110,7 +111,7 @@ for sheet in wb.sheetnames:
     result["categories"].append(category)
 
     # Assuming same ref colums for all items (possibly empty)
-    firstRefCol = 18 + 7
+    firstRefCol = 19 + 7
     lastRefCol = find_last_ref_col(ws, firstRefCol)
     if lastRefCol < ws.max_column:
         for k in range(lastRefCol, ws.max_column + 1):
