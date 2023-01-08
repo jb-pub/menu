@@ -149,11 +149,18 @@
                             <div class="item-box box" v-for="item in subcategory.items" v-if="!item.hidden">
                                 <!-- <div class="item-column"> -->
 
-                                    <div style="display: flex; flex-direction: column; padding-right: 6vw;">
-                                    
-                                        <div class="item-title-bar">
-                                            <div class="item-title">{{item.name}}</div>
-                                            <img :content="infoTooltip(info)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="info in item.infos" v-bind:src="'images/allergens_' + info + '.png'">
+                                    <div style="display: flex; flex-direction: column; padding-right: 6vw; gap: 2vh;">
+
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 2vw; height: 15vh;">
+
+                                            <!-- <div style="background-image: url(./images/magnifier.png); background-repeat: no-repeat; background-position: center; background-size: contain;"> -->
+                                            <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/items/thumbs/' + item.id + '_t.jpg\')'}"></div>
+
+                                            <div class="item-title-bar">
+                                                <div class="item-title">{{item.name}}</div>
+                                                <img :content="infoTooltip(info)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="info in item.infos" v-bind:src="'images/allergens_' + info + '.png'">
+                                            </div>
+
                                         </div>
 
                                         <div class="item-description" style="text-align:justify; text-justify: newspaper;">{{item.description}}</div>

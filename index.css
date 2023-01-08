@@ -336,10 +336,11 @@ body {
     display: flex;
     align-items: center; 
 }
-
+/*
 .item-title-bar > :first-child {
     margin-right: 1vh;
 }
+*/
 
 .item-description {
     /* font-family: 'Stardos Stencil';
