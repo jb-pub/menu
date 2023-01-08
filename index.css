@@ -413,3 +413,33 @@ body {
     padding:.375rem .75rem;
     font-size: 2vh;
 }
+
+/* POPUP IMMAGINI */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    display: none;
+}
+
+.popup {
+    /* to put it in the middle */
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-image {
+    width: 80vw;
+}
+.popup-image-loading {
+    margin-bottom: 4vh;
+}
+
+.popup-image-exit {
+    margin-top: 4vh;
+}

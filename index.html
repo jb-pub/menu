@@ -154,7 +154,7 @@
                                         <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 2vw; height: 15vh;">
 
                                             <!-- <div style="background-image: url(./images/magnifier.png); background-repeat: no-repeat; background-position: center; background-size: contain;"> -->
-                                            <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/items/thumbs/' + item.id + '_t.jpg\')'}"></div>
+                                            <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/items/thumbs/' + item.id + '_t.jpg\')'}" v-on:click="showImagePopup('./images/items/pics/' + item.id + '.jpg')"></div>
 
                                             <div class="item-title-bar">
                                                 <div class="item-title">{{item.name}}</div>
@@ -215,6 +215,13 @@
                 </div>
             </div>
             <div></div>
+        </div>
+        <div class="backdrop" onclick="closeImagePopup()">
+            <div class="popup" onclick="closeImagePopup()">
+                <div class="popup-image-loading" style="color: white;">CARICAMENTO...</div>
+                <img src="./images/items/pics/chili_carne.jpg" class="popup-image" onload="onImageLoaded()"/>
+                <div class="popup-image-exit" style="color: white;">ESCI</div>
+            </div>
         </div>
     </body>
 
@@ -301,6 +308,20 @@ var page = new Vue({
         //         }
         //     }).show()
         // },
+        showImagePopup(src) {
+            let backdrop = document.getElementsByClassName("backdrop")[0]
+            let popup = document.getElementsByClassName("popup")[0]
+            let image = document.getElementsByClassName("popup-image")[0]
+            let loading = document.getElementsByClassName("popup-image-loading")[0]
+            let exit = document.getElementsByClassName("popup-image-exit")[0]
+            backdrop.style.display = "block"
+            popup.style.display = "block"
+            loading.style.visibility = 'visible'
+            loading.style.display = "block"
+            exit.style.visibility = 'hidden'
+            exit.style.display = "block"
+            image.src = src
+        },
         infoTooltip(info) {
             return this.infos[info].name
         },
@@ -387,8 +408,7 @@ window.oncontextmenu = function(event) {
 
 window.onbeforeunload = function() { return "Your work will be lost."; };
 
-window.addEventListener('popstate', function (event)
-{
+window.addEventListener('popstate', function (event) {
     document.getElementsByClassName("home").item(0).style.visibility='visible'
     document.getElementById("page").style.visibility='hidden'
 
@@ -401,6 +421,22 @@ function closeHome() {
     history.pushState(null, document.title, location.href);
 
     document.getElementsByClassName("popup").item(0).style.display='none'
+}
+
+/* IMAGE POPUP */
+
+function closeImagePopup() {
+    let backdrop = document.getElementsByClassName("backdrop")[0]
+    let popup = document.getElementsByClassName("popup")[0]
+    backdrop.style.display = "none"
+    popup.style.display = "none"
+}
+
+function onImageLoaded() {
+    let loading = document.getElementsByClassName("popup-image-loading")[0]
+    let exit = document.getElementsByClassName("popup-image-exit")[0]
+    loading.style.visibility = "hidden"
+    exit.style.visibility = "visible"
 }
 
 </script>
