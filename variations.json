@@ -2,5 +2,9 @@
   "noir": {
     "hidden": false,
     "name": "ALTOTEVERE NOIR"
+  },
+  "rama": {
+    "hidden": true,
+    "name": "RAMA"
   }
 }
