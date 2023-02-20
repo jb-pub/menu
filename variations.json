@@ -6,5 +6,9 @@
   "maes": {
     "hidden": false,
     "name": "MAES PILS"
+  },
+  "lagunitas": {
+    "hidden": false,
+    "name": "LAGUNITAS IPA"
   }
 }
