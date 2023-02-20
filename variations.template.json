@@ -1,0 +1,11 @@
+{
+    "maes": {
+        "name": "PROVA",
+        "hidden": false,
+        "sizes": {
+            "maes_p": {
+                "price": 0.99
+            }
+        }
+    }
+}

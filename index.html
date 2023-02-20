@@ -368,22 +368,56 @@ var page = new Vue({
         }
         this.observer = new IntersectionObserver(this.onElementObserved, options);
 
-        fetch("./context.json")
-            .then((resp) => resp.json())
-            .then((json) => {
+        Promise.all([
+            fetch("./context.json"),
+            fetch("./variations.json")
+        ]).then(resps => {
 
-                json.categories.forEach(category => {
+            Promise.all([resps[0].json(), resps[1].json()]).then((jsons) => {
+
+                let context = jsons[0]
+                let variations = jsons[1]
+
+                console.log(context, variations)
+                
+                context.categories.forEach(category => {
                     category.selected = false
 
                     category.subcategories.forEach(subcategory => {
                         subcategory.expanded = false
                         subcategory.visible = null
                         subcategory.headerVisible = null
+
+                        subcategory.items.forEach(item => {
+                            let itemId = item.id
+                            let variation = variations[itemId]
+
+                            if (variation) {
+                                if (variation.name)
+                                    item.name = variation.name
+                                if (variation.hidden)
+                                    item.hidden = variation.hidden
+
+                                if (variation.sizes) {
+                                    Object.keys(variation.sizes).forEach(variationSizeRef => {
+                                        let variationSize = variation.sizes[variationSizeRef]
+                                        let itemSize = item.sizes.filter(s => s.ref == variationSizeRef)[0]
+                                        if (variationSize.label)
+                                            itemSize.label = variationSize.label
+                                        if (variationSize.price)
+                                            itemSize.price = variationSize.price
+                                    })
+                                }
+                            }
+                        })
                     });
                 })
 
-                this.categories = json.categories
+                // TODO Merge and obtain new object
+
+                this.categories = context.categories
             })
+        })
     },
     destroyed () {
         // console.log("destroyed")
