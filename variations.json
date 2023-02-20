@@ -2,5 +2,9 @@
   "noir": {
     "hidden": false,
     "name": "ALTOTEVERE NOIR"
+  },
+  "maes": {
+    "hidden": true,
+    "name": "MAES PILS"
   }
 }
