@@ -402,10 +402,12 @@ var page = new Vue({
                                     Object.keys(variation.sizes).forEach(variationSizeRef => {
                                         let variationSize = variation.sizes[variationSizeRef]
                                         let itemSize = item.sizes.filter(s => s.ref == variationSizeRef)[0]
-                                        if (variationSize.label)
-                                            itemSize.label = variationSize.label
-                                        if (variationSize.price)
-                                            itemSize.price = variationSize.price
+                                        if (itemSize) {
+                                            if (variationSize.label)
+                                                itemSize.label = variationSize.label
+                                            if (variationSize.price)
+                                                itemSize.price = variationSize.price
+                                        }
                                     })
                                 }
                             }
