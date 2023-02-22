@@ -12,7 +12,7 @@
     "name": "LAGUNITAS IPA"
   },
   "nevone": {
-    "hidden": true,
+    "hidden": false,
     "name": "AMARCORD DEL NEVONE"
   }
 }
