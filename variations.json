@@ -22,5 +22,9 @@
   "guinness": {
     "hidden": false,
     "name": "GUINNESS IRISH STOUT"
+  },
+  "chimay_trippel": {
+    "hidden": true,
+    "name": "CHIMAY TRIPPEL"
   }
 }
