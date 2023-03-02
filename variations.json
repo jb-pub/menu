@@ -30,5 +30,9 @@
   "sanb_peach": {
     "hidden": false,
     "name": "TE FREDDO ALLA PESCA"
+  },
+  "sanb_lemon": {
+    "hidden": false,
+    "name": "TE FREDDO AL LIMONE"
   }
 }
