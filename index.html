@@ -393,9 +393,9 @@ var page = new Vue({
                             let variation = variations[itemId]
 
                             if (variation) {
-                                if (variation.name)
+                                if (variation.name != null && variation.name != undefined)
                                     item.name = variation.name
-                                if (variation.hidden)
+                                if (variation.hidden != null && variation.hidden != undefined)
                                     item.hidden = variation.hidden
 
                                 if (variation.sizes) {
