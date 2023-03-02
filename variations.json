@@ -18,5 +18,9 @@
   "blanche": {
     "hidden": false,
     "name": "BLANCHE DE BRUXELLES"
+  },
+  "guinness": {
+    "hidden": false,
+    "name": "GUINNESS IRISH STOUT"
   }
 }
