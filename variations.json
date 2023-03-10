@@ -34,5 +34,9 @@
   "sanb_lemon": {
     "hidden": false,
     "name": "TE FREDDO AL LIMONE"
+  },
+  "oktober_stinco": {
+    "hidden": true,
+    "name": "STINCO BAVARESE"
   }
 }
