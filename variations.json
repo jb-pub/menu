@@ -40,7 +40,7 @@
     "name": "STINCO BAVARESE"
   },
   "hp keller": {
-    "hidden": true,
+    "hidden": false,
     "name": "HACKER PSCHORR KELLER"
   }
 }
