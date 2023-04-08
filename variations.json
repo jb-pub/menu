@@ -16,7 +16,7 @@
     "name": "AMARCORD DEL NEVONE"
   },
   "blanche": {
-    "hidden": false,
+    "hidden": true,
     "name": "BLANCHE DE BRUXELLES"
   },
   "guinness": {
