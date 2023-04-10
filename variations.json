@@ -20,7 +20,7 @@
     "name": "BLANCHE DE BRUXELLES"
   },
   "guinness": {
-    "hidden": false,
+    "hidden": true,
     "name": "GUINNESS IRISH STOUT"
   },
   "chimay_trippel": {
