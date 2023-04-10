@@ -61,6 +61,10 @@
   },
   "chicken_pops": {
     "hidden": true,
-    "name": "CHICKEN POPS* (novit‡!)"
+    "name": "CHICKEN POPS* (novit√†!)"
+  },
+  "alette": {
+    "hidden": true,
+    "name": "ALETTE DI POLLO*"
   }
 }
