@@ -2,5 +2,9 @@
   "lambrate_core": {
     "hidden": true,
     "name": "BIRRIFICIO LAMBRATE - CORE"
+  },
+  "estatic_lambrate": {
+    "hidden": true,
+    "name": "ESTATIC"
   }
 }
