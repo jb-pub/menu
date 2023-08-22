@@ -6,5 +6,9 @@
   "estatic_lambrate": {
     "hidden": false,
     "name": "ESTATIC"
+  },
+  "claire_table": {
+    "hidden": true,
+    "name": "CLAIRE TABLE IPA"
   }
 }
