@@ -18,5 +18,9 @@
   "slalom": {
     "hidden": true,
     "name": "SLALOM STRONG LAGER "
+  },
+  "lagunitas": {
+    "hidden": true,
+    "name": "LAGUNITAS IPA"
   }
 }
