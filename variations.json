@@ -10,5 +10,9 @@
   "claire_table": {
     "hidden": true,
     "name": "CLAIRE TABLE IPA"
+  },
+  "guinness": {
+    "hidden": true,
+    "name": "GUINNESS IRISH STOUT"
   }
 }
