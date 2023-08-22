@@ -14,5 +14,9 @@
   "guinness": {
     "hidden": true,
     "name": "GUINNESS IRISH STOUT"
+  },
+  "slalom": {
+    "hidden": true,
+    "name": "SLALOM STRONG LAGER "
   }
 }
