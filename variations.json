@@ -16,7 +16,7 @@
     "name": "GUINNESS IRISH STOUT"
   },
   "slalom": {
-    "hidden": true,
+    "hidden": false,
     "name": "SLALOM STRONG LAGER "
   },
   "lagunitas": {
