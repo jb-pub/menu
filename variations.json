@@ -12,7 +12,7 @@
     "name": "CLAIRE TABLE IPA"
   },
   "guinness": {
-    "hidden": true,
+    "hidden": false,
     "name": "GUINNESS IRISH STOUT"
   },
   "slalom": {
