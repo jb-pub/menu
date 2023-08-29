@@ -26,5 +26,9 @@
   "crispy chick": {
     "hidden": false,
     "name": "CRISPY CHICK"
+  },
+  "piada_classica": {
+    "hidden": true,
+    "name": "LA CLASSICA"
   }
 }
