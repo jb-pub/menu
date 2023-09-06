@@ -2,5 +2,33 @@
   "lambrate_core": {
     "hidden": true,
     "name": "BIRRIFICIO LAMBRATE - CORE"
+  },
+  "estatic_lambrate": {
+    "hidden": false,
+    "name": "ESTATIC"
+  },
+  "claire_table": {
+    "hidden": true,
+    "name": "CLAIRE TABLE IPA"
+  },
+  "guinness": {
+    "hidden": false,
+    "name": "GUINNESS IRISH STOUT"
+  },
+  "slalom": {
+    "hidden": false,
+    "name": "SLALOM STRONG LAGER "
+  },
+  "lagunitas": {
+    "hidden": false,
+    "name": "LAGUNITAS IPA"
+  },
+  "crispy chick": {
+    "hidden": false,
+    "name": "CRISPY CHICK"
+  },
+  "piada_classica": {
+    "hidden": true,
+    "name": "LA CLASSICA"
   }
 }
