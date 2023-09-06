@@ -4,7 +4,7 @@
     "name": "BIRRIFICIO LAMBRATE - CORE"
   },
   "estatic_lambrate": {
-    "hidden": false,
+    "hidden": true,
     "name": "ESTATIC"
   },
   "claire_table": {
@@ -30,5 +30,12 @@
   "piada_classica": {
     "hidden": true,
     "name": "LA CLASSICA"
+  },
+  "undefined": {
+    "hidden": true
+  },
+  "augustiner": {
+    "hidden": false,
+    "name": "AUGUSTINER EDELSTOFF"
   }
 }
