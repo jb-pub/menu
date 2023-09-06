@@ -33,5 +33,9 @@
   },
   "undefined": {
     "hidden": true
+  },
+  "augustiner": {
+    "hidden": false,
+    "name": "AUGUSTINER EDELSTOFF"
   }
 }
