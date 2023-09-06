@@ -4,7 +4,7 @@
     "name": "BIRRIFICIO LAMBRATE - CORE"
   },
   "estatic_lambrate": {
-    "hidden": false,
+    "hidden": true,
     "name": "ESTATIC"
   },
   "claire_table": {
