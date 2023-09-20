@@ -59,7 +59,7 @@
     "name": "MURPHY'S RED"
   },
   "jb mix": {
-    "hidden": true,
+    "hidden": false,
     "name": "JB MIX"
   }
 }
