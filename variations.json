@@ -35,7 +35,31 @@
     "hidden": true
   },
   "augustiner": {
-    "hidden": true,
+    "hidden": false,
     "name": "AUGUSTINER EDELSTOFF"
+  },
+  "jala ": {
+    "hidden": true,
+    "name": "JALAPEÑOS*"
+  },
+  "anelli": {
+    "hidden": true,
+    "name": "ANELLI DI CIPOLLA*"
+  },
+  "affligem": {
+    "hidden": true,
+    "name": "AFFLIGEM ROUGE"
+  },
+  "marialti_ninik": {
+    "hidden": true,
+    "name": "MARIALTI NINIK BLANCHE"
+  },
+  "murphys": {
+    "hidden": true,
+    "name": "MURPHY'S RED"
+  },
+  "jb mix": {
+    "hidden": true,
+    "name": "JB MIX"
   }
 }
