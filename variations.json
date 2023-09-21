@@ -61,5 +61,9 @@
   "jb mix": {
     "hidden": false,
     "name": "JB MIX"
+  },
+  "magners_pera": {
+    "hidden": true,
+    "name": "SIDRO MAGNERS PERA"
   }
 }
