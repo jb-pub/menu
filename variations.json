@@ -73,5 +73,9 @@
   "long john": {
     "hidden": true,
     "name": "LONG JOHN SILVER"
+  },
+  "porta_orifiamma": {
+    "hidden": true,
+    "name": "PORTA BRUCIATA - ORIFIAMMA"
   }
 }
