@@ -65,5 +65,9 @@
   "magners_pera": {
     "hidden": true,
     "name": "SIDRO MAGNERS PERA"
+  },
+  "verdemare": {
+    "hidden": true,
+    "name": "VERDEMARE"
   }
 }
