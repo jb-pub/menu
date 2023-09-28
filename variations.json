@@ -81,5 +81,9 @@
   "bitburg_nf": {
     "hidden": false,
     "name": "BITBURGER NON FILTRATA"
+  },
+  "mozza": {
+    "hidden": true,
+    "name": "MOZZARELLA STICKS*"
   }
 }
