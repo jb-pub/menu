@@ -93,5 +93,9 @@
   "terraferma_fiestbier": {
     "hidden": true,
     "name": "TERRAFERMA FESTBIER"
+  },
+  "spaten_oktober": {
+    "hidden": true,
+    "name": "SPATEN OKTOBERFEST"
   }
 }
