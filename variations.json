@@ -97,5 +97,9 @@
   "spaten_oktober": {
     "hidden": false,
     "name": "SPATEN OKTOBERFEST"
+  },
+  "lowen_oktober": {
+    "hidden": true,
+    "name": "LOWENBRAU OKTOBERFEST"
   }
 }
