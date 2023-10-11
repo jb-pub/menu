@@ -101,5 +101,9 @@
   "lowen_oktober": {
     "hidden": true,
     "name": "LOWENBRAU OKTOBERFEST"
+  },
+  "cuba_libre": {
+    "hidden": false,
+    "name": "CUBA LIBRE"
   }
 }
