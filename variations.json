@@ -105,5 +105,9 @@
   "cuba_libre": {
     "hidden": false,
     "name": "CUBA LIBRE"
+  },
+  "nob_hill": {
+    "hidden": true,
+    "name": "NOB HILL IPA"
   }
 }
