@@ -95,7 +95,7 @@
     "name": "TERRAFERMA FESTBIER"
   },
   "spaten_oktober": {
-    "hidden": false,
+    "hidden": true,
     "name": "SPATEN OKTOBERFEST"
   },
   "lowen_oktober": {
