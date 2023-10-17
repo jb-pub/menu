@@ -16,7 +16,7 @@
     "name": "GUINNESS IRISH STOUT"
   },
   "slalom": {
-    "hidden": false,
+    "hidden": true,
     "name": "SLALOM STRONG LAGER "
   },
   "lagunitas": {
@@ -83,15 +83,35 @@
     "name": "BITBURGER NON FILTRATA"
   },
   "mozza": {
-    "hidden": true,
+    "hidden": false,
     "name": "MOZZARELLA STICKS*"
   },
   "orifiamma_ft": {
-    "hidden": true,
+    "hidden": false,
     "name": "ORIFIAMMA AMERICAN IPA"
   },
   "terraferma_fiestbier": {
-    "hidden": true,
+    "hidden": false,
     "name": "TERRAFERMA FESTBIER"
+  },
+  "spaten_oktober": {
+    "hidden": true,
+    "name": "SPATEN OKTOBERFEST"
+  },
+  "lowen_oktober": {
+    "hidden": true,
+    "name": "LOWENBRAU OKTOBERFEST"
+  },
+  "cuba_libre": {
+    "hidden": false,
+    "name": "CUBA LIBRE"
+  },
+  "nob_hill": {
+    "hidden": true,
+    "name": "NOB HILL IPA"
+  },
+  "oktober_stinco": {
+    "hidden": true,
+    "name": "STINCO BAVARESE"
   }
 }

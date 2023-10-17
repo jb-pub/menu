@@ -16,6 +16,42 @@ a.nostyle:visited {
 
 /**/
 
+.popup-square {
+    top: 50%;
+    left: 50%;
+    margin-top: -20vh;
+    margin-left: -20vh;
+    position: fixed;
+
+    background-image: url(images/oktoberfest23.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 40vh;
+    height: 40vh;
+
+    border: thin solid black;
+}
+
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    font-size: 4vh;
+
+}
+
+#close:hover {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+    color:#fff;
+}
+
+/**/
+
 .popup {
 
     font-family: 'Stardos Stencil';
