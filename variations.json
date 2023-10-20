@@ -113,5 +113,9 @@
   "oktober_stinco": {
     "hidden": true,
     "name": "STINCO BAVARESE"
+  },
+  "oktober_wurst": {
+    "hidden": true,
+    "name": "PIATTO WURSTEL"
   }
 }
