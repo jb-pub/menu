@@ -117,5 +117,9 @@
   "oktober_wurst": {
     "hidden": true,
     "name": "PIATTO WURSTEL"
+  },
+  "chicken_fingers": {
+    "hidden": true,
+    "name": "CHICKEN FINGERS*"
   }
 }
