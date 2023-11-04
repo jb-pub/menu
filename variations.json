@@ -121,5 +121,9 @@
   "chicken_fingers": {
     "hidden": true,
     "name": "CHICKEN FINGERS*"
+  },
+  "piada_cotto": {
+    "hidden": true,
+    "name": "FORMAGGINA"
   }
 }
