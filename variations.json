@@ -129,5 +129,9 @@
   "piada_nutella": {
     "hidden": true,
     "name": "NUTELLA"
+  },
+  "piada_salame_milano": {
+    "hidden": true,
+    "name": "SALAME MILANO"
   }
 }
