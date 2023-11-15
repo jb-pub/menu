@@ -125,5 +125,9 @@
   "piada_cotto": {
     "hidden": true,
     "name": "FORMAGGINA"
+  },
+  "piada_nutella": {
+    "hidden": true,
+    "name": "NUTELLA"
   }
 }
