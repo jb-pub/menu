@@ -38,7 +38,7 @@ a.nostyle:visited {
     display:inline-block;
     padding:2px 5px;
     background:#ccc;
-    font-size: 4vh;
+    font-size: 1vh;
 
 }
 
@@ -225,7 +225,7 @@ body {
     /* justify-content: center; */
 
     margin: 5vh 2vw;
-    height: 15vh;
+    height: 10vh;
 
     padding: 0vh 2vw;
 
@@ -240,7 +240,7 @@ body {
     font-family: 'Stardos Stencil';
     /* font-family: "Standard CT Stencil Bold"; */
     letter-spacing: 2px;
-    font-size: 5vh;
+    font-size: 3vh;
     /* color: #4f2603; */
     font-weight: 700;
 
@@ -406,11 +406,11 @@ body {
 }
 
 .subcategory-header > :nth-child(1) {
-    font-size: 4vh;
+    font-size:3vh;
 }
 
 .subcategory-header > :nth-child(2) {
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
 .info-icon {
