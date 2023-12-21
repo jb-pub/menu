@@ -208,7 +208,7 @@
             </div>
             <div class="categories-column" v-if="!currentCategory">
                 <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
-                <div v-for="category in categories">
+                <div v-for="category in visibleCategories">
                     <!-- <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;"> -->
                         <div class="category-box box" v-on:click="category.selected = true; currentCategory = category;">
                         <!-- <div class="category-image"></div> -->
@@ -278,6 +278,9 @@ var page = new Vue({
         // ]
     },
     computed: {
+        visibleCategories() {
+            return this.categories.filter(cat => cat.id != 'distillati_shots_co')
+        },
         currentSubcategory() {
             let visibleSubcategories = []
             this.categories.forEach((category) => {
