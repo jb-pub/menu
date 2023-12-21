@@ -137,7 +137,7 @@
     "name": "MASTINO PILS 1291"
   },
   "pulled_bites": {
-    "hidden": true,
+    "hidden": false,
     "name": "PULLED PORK BITES*"
   }
 }
