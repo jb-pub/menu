@@ -129,7 +129,7 @@
             <div class="logo"></div>
             <div v-if="currentCategory">
                 <div class="category-box box">
-                    <!-- <div class="category-image"></div> -->
+                    <div style="margin-right: 5vw; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/categories/' + currentCategory.id + '.jpg\')'}"></div>
                     <div class="category-title" v-on:click="currentCategory.selected = false; currentCategory = null;">
                         <!-- <div style="display: grid; grid-template-rows: 1fr 1fr;"> -->
                         <div v-bind:class="{ 'subcategory-header': currentSubcategory }">
@@ -210,8 +210,9 @@
                 <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
                 <div v-for="category in visibleCategories">
                     <!-- <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;"> -->
-                        <div class="category-box box" v-on:click="category.selected = true; currentCategory = category;">
+                    <div class="category-box box" v-on:click="category.selected = true; currentCategory = category;">
                         <!-- <div class="category-image"></div> -->
+                        <div style="margin-right: 5vw; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/categories/' + category.id + '.jpg\')'}"></div>
                         <div class="category-title"><span>{{category.name}}</span></div>
                         <div class="category-button plus"></div>
                         <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->

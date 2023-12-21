@@ -221,7 +221,7 @@ body {
 
 .category-box {
     display: grid;
-    grid-template-columns: 1fr 10vw;
+    grid-template-columns: 1fr 1.5fr 0.5fr;
     /* justify-content: center; */
 
     margin: 4vh 2vw;
