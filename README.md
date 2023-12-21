@@ -1,4 +1,5 @@
 - [ ] Fix allineamento header categorie quando appare il tasto "chiudi" per la navigazione
+- [ ] Maggiore qualità per le thumbnails
 - [ ] Immagine per le categorie
 - [X] Visualizzazione foto cliccando su icona vicino al nome
 - [X] Versione basic
