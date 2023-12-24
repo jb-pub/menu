@@ -143,5 +143,9 @@
   "oktober_bretzel": {
     "hidden": false,
     "name": "BRETZEL"
+  },
+  "mastino_babbo": {
+    "hidden": true,
+    "name": "MASTINO BABBO"
   }
 }
