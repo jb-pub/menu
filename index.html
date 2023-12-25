@@ -17,7 +17,7 @@
         </div> -->
 
 
-        <div class="home">
+        <div class="home" style="display: none;">
             <div class="home-content">
             
                 <!-- <div class="title">BENVENUTO</div> -->
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        <div id="page" style="position:fixed; left: 0; top: 0; visibility: hidden;">
+        <div id="page" style="position:fixed; left: 0; top: 0; visibility: visible;">
             <div class="logo"></div>
             <div v-if="currentCategory">
                 <div class="category-box box">
@@ -240,6 +240,7 @@
 var page = new Vue({
     el: '#page',
     data: {
+        homeClosed: false,
         observer: null,
         currentCategory: null,
         categories: [],
