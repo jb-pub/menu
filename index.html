@@ -155,47 +155,47 @@
                             <div class="item-box box" v-for="item in subcategory.items" v-if="!item.hidden">
                                 <!-- <div class="item-column"> -->
 
-                                    <div style="display: flex; flex-direction: column; padding-right: 6vw; gap: 2vh;">
+                                <div style="display: flex; flex-direction: column; gap: 2vh;">
 
-                                        <div style="display: grid; grid-template-columns: 1fr 1fr; column-gap: 2vw; height: 15vh;">
+                                    <div style="display: grid; grid-template-columns: 0.6fr 1.4fr; column-gap: 2vw; height: 15vh;">
 
-                                            <!-- <div style="background-image: url(./images/magnifier.png); background-repeat: no-repeat; background-position: center; background-size: contain;"> -->
-                                            <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/items/thumbs/' + item.id + '_t.jpg\')'}" v-on:click="showImagePopup('./images/items/pics/' + item.id + '.jpg')"></div>
+                                        <!-- <div style="background-image: url(./images/magnifier.png); background-repeat: no-repeat; background-position: center; background-size: contain;"> -->
+                                        <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/items/thumbs/' + item.id + '_t.jpg\')'}" v-on:click="showImagePopup('./images/items/pics/' + item.id + '.jpg')"></div>
 
-                                            <div class="item-title-bar">
-                                                <div class="item-title">{{item.name}}</div>
-                                                <img :content="infoTooltip(info)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="info in item.infos" v-bind:src="'images/allergens_' + info + '.png'">
-                                            </div>
-
+                                        <div class="item-title-bar">
+                                            <div class="item-title">{{item.name}}</div>
+                                            <img :content="infoTooltip(info)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="info in item.infos" v-bind:src="'images/allergens_' + info + '.png'">
                                         </div>
 
-                                        <div class="item-description" style="text-align:justify; text-justify: newspaper;">{{item.description}}</div>
-
-                                        <div class="allergens-row">
-                                            <div v-if="item.allergens.length">Contiene:</div>
-                                            <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
-                                        </div>
-                                    
                                     </div>
 
-                                    <div class="prices-grid" >
-                                        <div v-for="size in item.sizes" style="display: grid; grid-template-columns: 1fr 1fr; flex-grow: 1; align-items: center; justify-items: center; align-content: center; justify-content: center;">
-                                            <div style="flex-grow: 1;" class="item-price">{{size.label}}</div>
-                                            <div style="flex-grow: 1;" class="item-price">{{size.price}} €</div>
-                                        </div>
-                                        <!-- <template v-for="size in item.sizes"> -->
-                                            <!-- <div class="item-description" style="white-space: nowrap;">{{size.label}}</div>
-                                            <div class="item-description" style="white-space: nowrap;">{{size.price}}</div> -->
-                                            <!-- <div class="item-price">{{size.label}}</div>
-                                            <div class="item-price">{{size.price}}</div> -->
-                                        <!-- </template> -->
-                                    </div>
+                                    <div class="item-description" style="text-align:justify; text-justify: newspaper;">{{item.description}}</div>
+                                
+                                </div>
 
-                                    <!-- <div class="item-description" style="margin-top: 1vh;">{{item.description}}</div>
-                                    <div class="item-description" style="display: flex; align-items: center; margin-top: 2vh;">
-                                        <span style="margin-right: 1vh;">Contiene:</span>
-                                        <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
-                                    </div> -->
+                                <div class="prices-grid" >
+                                    <div v-for="size in item.sizes" style="display: grid; grid-template-columns: 1fr 1fr; flex-grow: 1; align-items: center; justify-items: center; align-content: center; justify-content: center;">
+                                        <div style="flex-grow: 1;" class="item-price">{{size.label}}</div>
+                                        <div style="flex-grow: 1;" class="item-price">{{size.price}} €</div>
+                                    </div>
+                                    <!-- <template v-for="size in item.sizes"> -->
+                                        <!-- <div class="item-description" style="white-space: nowrap;">{{size.label}}</div>
+                                        <div class="item-description" style="white-space: nowrap;">{{size.price}}</div> -->
+                                        <!-- <div class="item-price">{{size.label}}</div>
+                                        <div class="item-price">{{size.price}}</div> -->
+                                    <!-- </template> -->
+                                </div>
+
+                                <div class="allergens-row">
+                                    <div v-if="item.allergens.length">Contiene:</div>
+                                    <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
+                                </div>
+
+                                <!-- <div class="item-description" style="margin-top: 1vh;">{{item.description}}</div>
+                                <div class="item-description" style="display: flex; align-items: center; margin-top: 2vh;">
+                                    <span style="margin-right: 1vh;">Contiene:</span>
+                                    <img :content="infoTooltip(allergen)" v-tippy="{ trigger : 'mouseenter', size: 'large', arrow: 'true' }" class="info-icon" v-for="allergen in item.allergens" v-bind:src="'images/allergens_' + allergen + '.png'">
+                                </div> -->
 
                                 <!-- </div> -->
                                 <!-- <div class="prices-grid"> -->

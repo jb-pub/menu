@@ -341,7 +341,8 @@ body {
 .item-box {
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 1fr auto;
 
     /* align-items: center;
     justify-content: center; */
@@ -440,6 +441,7 @@ body {
     align-items: center; 
     margin-top: 2vh;
     font-size: 2vh;
+    grid-column: span 2;
 }
 
 .allergens-row > :first-child {
