@@ -57,7 +57,7 @@
     "name": "MURPHY'S RED"
   },
   "jb mix": {
-    "hidden": false,
+    "hidden": true,
     "name": "JB MIX"
   },
   "magners_pera": {
@@ -85,7 +85,7 @@
     "name": "MOZZARELLA STICKS*"
   },
   "orifiamma_ft": {
-    "hidden": true,
+    "hidden": false,
     "name": "ORIFIAMMA AMERICAN IPA"
   },
   "terraferma_fiestbier": {
@@ -147,5 +147,9 @@
   "mastino_babbo": {
     "hidden": true,
     "name": "MASTINO BABBO"
+  },
+  "oh_sheep_ft": {
+    "hidden": true,
+    "name": "OH SHEEP IPA"
   }
 }
