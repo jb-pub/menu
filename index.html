@@ -139,7 +139,7 @@
                     <div class="category-button minus" v-on:click="currentCategory.selected = false; currentCategory = null;"></div>
                     <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
                 </div>          
-                <div class="subcategory-box box" v-if="currentSubcategory" v-on:click="currentSubcategory.expanded  ? currentSubcategory.expanded = false : currentSubcategory.expanded = true">
+                <div class="subcategory-box box" v-if="currentSubcategory" v-on:click="toggleSubcategory(currentSubcategory)">
                     <div class="subcategory-title" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="currentSubcategory.id">{{currentSubcategory.name}}</div>
                     <div class="category-button" v-bind:class="{'minus':currentSubcategory.expanded, 'plus':!currentSubcategory.expanded}"></div>
                     <!-- <div v-on:click.stop="currentSubcategory.expanded = false" style="margin-right: 1vw;" class="category-button close"></div>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="items-container">
                     <div v-for="subcategory in currentCategory.subcategories" v-if="!subcategory.hidden" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
-                        <div class="subcategory-box box" v-on:click="subcategory.expanded  ? subcategory.expanded = false : subcategory.expanded = true">
+                        <div class="subcategory-box box" v-on:click="toggleSubcategory(subcategory)">
                             <div class="subcategory-title observable" data-subcategory-header="true" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">{{subcategory.name}}</div>
                             <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
                         </div>
@@ -319,6 +319,19 @@ var page = new Vue({
         //         }
         //     }).show()
         // },
+        toggleSubcategory(subcategory) {
+            if (!subcategory.expanded) { 
+                this.categories.forEach(cat => {
+                    if (cat.subcategories.filter(subcat => subcat == subcategory).length > 0) {
+                        cat.subcategories.forEach(subcat => {
+                            if (subcat != subcategory)
+                                subcat.expanded = false
+                        })
+                    }
+                })
+            }
+            subcategory.expanded  = !subcategory.expanded
+        },
         showImagePopup(src) {
             let backdrop = document.getElementsByClassName("backdrop")[0]
             let popup = document.getElementsByClassName("popup")[0]
