@@ -342,7 +342,7 @@ body {
 
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr auto auto;
 
     /* align-items: center;
     justify-content: center; */
@@ -364,7 +364,7 @@ body {
     font-family: 'Stardos Stencil';
     /* font-family: "Standard CT Stencil Bold"; */
     letter-spacing: 2px;
-    font-size: 3vh;
+    font-size: 2.5vh;
     /* color: #4f2603; */
     font-weight: 400;
 }
@@ -388,6 +388,12 @@ body {
     font-size: 1.5vh; 
     font-family: 'Stardos Stencil';
     font-weight: lighter;
+
+    margin-top: 1vh;
+
+    padding: 1vh;
+
+    grid-column: span 2;
 }
 
 .item-price {
@@ -399,6 +405,7 @@ body {
     font-size: 2vh; 
     font-family: 'Stardos Stencil';
     font-weight: lighter;
+    white-space: nowrap;
 }
 
 .subcategory-header {
