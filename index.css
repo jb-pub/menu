@@ -225,7 +225,7 @@ body {
     /* justify-content: center; */
 
     margin: 4vh 2vw;
-    height: 15vh;
+    height: 12vh;
 
     padding: 0vh 2vw;
 
@@ -402,7 +402,8 @@ body {
 
 .subcategory-header {
     display: grid; 
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-rows: 1fr;
 }
 
 .subcategory-header > :nth-child(1) {

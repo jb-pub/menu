@@ -134,14 +134,16 @@
                         <!-- <div style="display: grid; grid-template-rows: 1fr 1fr;"> -->
                         <div v-bind:class="{ 'subcategory-header': currentSubcategory }">
                             <div>{{currentCategory.name}}</div>
-                            <div style="display: grid; grid-template-columns: 10vw 1fr; align-content: center;" v-if="currentSubcategory">
-                                <div v-on:click.stop="currentSubcategory.expanded = false" style="margin-right: 1vw;" class="category-button close"></div>
-                                <div>{{currentSubcategory.name}}</div>
-                            </div>
                         </div>
                     </div>
                     <div class="category-button minus" v-on:click="currentCategory.selected = false; currentCategory = null;"></div>
                     <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
+                </div>          
+                <div class="subcategory-box box" v-if="currentSubcategory" v-on:click="currentSubcategory.expanded  ? currentSubcategory.expanded = false : currentSubcategory.expanded = true">
+                    <div class="subcategory-title" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="currentSubcategory.id">{{currentSubcategory.name}}</div>
+                    <div class="category-button" v-bind:class="{'minus':currentSubcategory.expanded, 'plus':!currentSubcategory.expanded}"></div>
+                    <!-- <div v-on:click.stop="currentSubcategory.expanded = false" style="margin-right: 1vw;" class="category-button close"></div>
+                    <div>{{currentSubcategory.name}}</div> -->
                 </div>
                 <div class="items-container">
                     <div v-for="subcategory in currentCategory.subcategories" v-if="!subcategory.hidden" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
