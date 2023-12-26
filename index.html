@@ -172,9 +172,9 @@
                                 </div>
 
                                 <div class="prices-grid" >
-                                    <div v-for="size in item.sizes" style="display: grid; grid-template-columns: 1fr 1fr; flex-grow: 1; align-items: center; justify-items: center; align-content: center; justify-content: center;">
-                                        <div style="flex-grow: 1;" class="item-price">{{size.label}}</div>
-                                        <div style="flex-grow: 1;" class="item-price">{{size.price}} €</div>
+                                    <div class="prices-row" v-for="size in item.sizes" style="display: flex; flex-direction: column; align-items: center; justify-items: center; align-content: center; justify-content: center;">
+                                        <div class="item-price">{{size.price}} €</div>
+                                        <div class="item-label">{{size.label}}</div>
                                     </div>
                                     <!-- <template v-for="size in item.sizes"> -->
                                         <!-- <div class="item-description" style="white-space: nowrap;">{{size.label}}</div>
