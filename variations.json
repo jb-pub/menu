@@ -163,5 +163,9 @@
   "neworder": {
     "hidden": true,
     "name": "RENTON - NEW ORDER"
+  },
+  "amarcord_raccolto": {
+    "hidden": true,
+    "name": "AMARCORD DEL RACCOLTO"
   }
 }
