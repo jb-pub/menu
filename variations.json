@@ -167,5 +167,9 @@
   "amarcord_raccolto": {
     "hidden": true,
     "name": "AMARCORD DEL RACCOLTO"
+  },
+  "pulled_burger": {
+    "hidden": true,
+    "name": "PULLED PORK BURGER"
   }
 }
