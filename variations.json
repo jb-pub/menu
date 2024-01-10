@@ -171,5 +171,9 @@
   "pulled_burger": {
     "hidden": true,
     "name": "PULLED PORK BURGER"
+  },
+  "nevone": {
+    "hidden": true,
+    "name": "AMARCORD DEL NEVONE"
   }
 }
