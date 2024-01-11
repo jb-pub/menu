@@ -125,7 +125,7 @@
     "name": "FORMAGGINA"
   },
   "piada_nutella": {
-    "hidden": true,
+    "hidden": false,
     "name": "NUTELLA"
   },
   "piada_salame_milano": {
