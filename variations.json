@@ -175,5 +175,9 @@
   "nevone": {
     "hidden": true,
     "name": "AMARCORD DEL NEVONE"
+  },
+  "hot_dog_bavarese": {
+    "hidden": true,
+    "name": "HOT DOG BAVARESE"
   }
 }
