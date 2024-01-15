@@ -169,7 +169,7 @@
     "name": "AMARCORD DEL RACCOLTO"
   },
   "pulled_burger": {
-    "hidden": true,
+    "hidden": false,
     "name": "PULLED PORK BURGER"
   },
   "nevone": {
