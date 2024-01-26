@@ -121,7 +121,7 @@
     "name": "CHICKEN FINGERS*"
   },
   "piada_cotto": {
-    "hidden": false,
+    "hidden": true,
     "name": "FORMAGGINA"
   },
   "piada_nutella": {
