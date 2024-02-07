@@ -69,7 +69,7 @@
     "name": "VERDEMARE"
   },
   "long john": {
-    "hidden": true,
+    "hidden": false,
     "name": "LONG JOHN SILVER"
   },
   "porta_orifiamma": {
