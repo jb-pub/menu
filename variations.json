@@ -183,5 +183,9 @@
   "magners_mela": {
     "hidden": true,
     "name": "SIDRO MAGNERS MELA"
+  },
+  "bbq_ribs": {
+    "hidden": true,
+    "name": "BBQ RIBS"
   }
 }
