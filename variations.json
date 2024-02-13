@@ -189,7 +189,7 @@
     "name": "BBQ RIBS"
   },
   "sweetie": {
-    "hidden": true,
+    "hidden": false,
     "name": "RENTON - SWEETIE"
   }
 }
