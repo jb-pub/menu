@@ -196,5 +196,10 @@
   "la_pallata": {
     "hidden": false,
     "name": "PORTA BRUCIATA - LA PALLATA"
+  },
+  "freezo": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "ALTOTEVERE - FREEZO"
   }
 }
