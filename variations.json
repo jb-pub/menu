@@ -183,7 +183,8 @@
     "name": "HOT DOG BAVARESE"
   },
   "magners_mela": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "SIDRO MAGNERS MELA"
   },
   "bbq_ribs": {
