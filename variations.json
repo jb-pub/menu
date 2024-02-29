@@ -62,7 +62,8 @@
     "name": "JB MIX"
   },
   "magners_pera": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "SIDRO MAGNERS PERA"
   },
   "verdemare": {
