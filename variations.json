@@ -122,6 +122,7 @@
   },
   "chicken_fingers": {
     "hidden": false,
+    "unavailable": true,
     "name": "CHICKEN FINGERS*"
   },
   "piada_cotto": {
