@@ -43,7 +43,7 @@
   },
   "anelli": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "ANELLI DI CIPOLLA*"
   },
   "affligem": {
