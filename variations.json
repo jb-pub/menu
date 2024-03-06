@@ -198,8 +198,8 @@
     "name": "BBQ RIBS"
   },
   "sweetie": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "RENTON - SWEETIE"
   },
   "la_pallata": {
