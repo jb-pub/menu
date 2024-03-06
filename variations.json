@@ -213,8 +213,8 @@
     "name": "ALTOTEVERE - FREEZO"
   },
   "karmaleon": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "BIRRA DEL BOSCO - KARMALEON"
   },
   "hope": {
