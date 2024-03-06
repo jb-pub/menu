@@ -218,8 +218,8 @@
     "name": "BIRRA DEL BOSCO - KARMALEON"
   },
   "hope": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "MASTINO - IPA HOP.E"
   },
   "anima_nera": {
