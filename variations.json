@@ -225,5 +225,10 @@
   "anima_nera": {
     "hidden": true,
     "name": "ANIMA NERA"
+  },
+  "il_roggio": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "VALDOBBIADENE IL ROGGIO"
   }
 }
