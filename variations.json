@@ -159,8 +159,8 @@
     "name": "OH SHEEP IPA"
   },
   "mastino_amber": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "BIRRIFICIO MASTINO - MONACO"
   },
   "leffe": {
