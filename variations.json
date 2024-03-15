@@ -74,6 +74,7 @@
   },
   "long john": {
     "hidden": false,
+    "unavailable": true,
     "name": "LONG JOHN SILVER"
   },
   "porta_orifiamma": {
