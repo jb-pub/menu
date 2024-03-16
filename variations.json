@@ -233,5 +233,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "VALDOBBIADENE IL ROGGIO"
+  },
+  "red_b": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "REDBULL"
   }
 }
