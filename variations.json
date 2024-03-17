@@ -245,7 +245,7 @@
     "name": "CRODINO"
   },
   "teodorico": {
-    "hidden": false,
+    "hidden": true,
     "unavailable": true,
     "name": "MASTINO - TEODORICO PORTER"
   }
