@@ -207,7 +207,7 @@
   },
   "la_pallata": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PORTA BRUCIATA - LA PALLATA"
   },
   "freezo": {
