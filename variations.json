@@ -229,7 +229,8 @@
     "name": "MASTINO - IPA HOP.E"
   },
   "anima_nera": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "ANIMA NERA"
   },
   "il_roggio": {
