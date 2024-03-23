@@ -248,5 +248,9 @@
     "hidden": true,
     "unavailable": true,
     "name": "MASTINO - TEODORICO PORTER"
+  },
+  "mastino_bern": {
+    "hidden": true,
+    "name": "BIRRA MASTINO - BERN"
   }
 }
