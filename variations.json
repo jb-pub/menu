@@ -253,5 +253,10 @@
   "mastino_bern": {
     "hidden": true,
     "name": "BIRRA MASTINO - BERN"
+  },
+  "alette": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "ALETTE DI POLLO*"
   }
 }
