@@ -168,7 +168,7 @@
   },
   "leffe": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "LEFFE ROUGE"
   },
   "neworder": {
