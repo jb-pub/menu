@@ -174,7 +174,8 @@
     "name": "LEFFE ROUGE"
   },
   "neworder": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "RENTON - NEW ORDER"
   },
   "amarcord_raccolto": {
