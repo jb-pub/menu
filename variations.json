@@ -60,6 +60,7 @@
   },
   "jb mix": {
     "hidden": false,
+    "unavailable": true,
     "name": "JB MIX"
   },
   "magners_pera": {
@@ -69,12 +70,12 @@
   },
   "verdemare": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "VERDEMARE"
   },
   "long john": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "LONG JOHN SILVER"
   },
   "porta_orifiamma": {
@@ -83,11 +84,12 @@
   },
   "bitburg_nf": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "BITBURGER NON FILTRATA"
   },
   "mozza": {
     "hidden": false,
+    "unavailable": true,
     "name": "MOZZARELLA STICKS*"
   },
   "orifiamma_ft": {
@@ -124,7 +126,7 @@
   },
   "chicken_fingers": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "CHICKEN FINGERS*"
   },
   "piada_cotto": {
@@ -146,6 +148,7 @@
   },
   "pulled_bites": {
     "hidden": false,
+    "unavailable": true,
     "name": "PULLED PORK BITES*"
   },
   "oktober_bretzel": {
@@ -167,11 +170,12 @@
   },
   "leffe": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "LEFFE ROUGE"
   },
   "neworder": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "RENTON - NEW ORDER"
   },
   "amarcord_raccolto": {
@@ -207,7 +211,7 @@
   },
   "la_pallata": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PORTA BRUCIATA - LA PALLATA"
   },
   "freezo": {
@@ -226,7 +230,8 @@
     "name": "MASTINO - IPA HOP.E"
   },
   "anima_nera": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "ANIMA NERA"
   },
   "il_roggio": {
@@ -248,5 +253,19 @@
     "hidden": true,
     "unavailable": true,
     "name": "MASTINO - TEODORICO PORTER"
+  },
+  "mastino_bern": {
+    "hidden": true,
+    "name": "BIRRA MASTINO - BERN"
+  },
+  "alette": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "ALETTE DI POLLO*"
+  },
+  "blanche": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "IL MASTIO - LITHA BLANCHE"
   }
 }
