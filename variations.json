@@ -169,8 +169,8 @@
     "name": "BIRRIFICIO MASTINO - MONACO"
   },
   "leffe": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "LEFFE ROUGE"
   },
   "neworder": {
