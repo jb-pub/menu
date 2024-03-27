@@ -264,8 +264,8 @@
     "name": "ALETTE DI POLLO*"
   },
   "blanche": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "IL MASTIO - LITHA BLANCHE"
   }
 }
