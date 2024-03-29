@@ -273,5 +273,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "SHERAZADE"
+  },
+  "salutare": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "SALUTARE"
   }
 }
