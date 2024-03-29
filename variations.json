@@ -278,5 +278,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "SALUTARE"
+  },
+  "pata": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "PATATINE FRITTE*"
   }
 }
