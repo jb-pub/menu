@@ -268,5 +268,10 @@
     "hidden": true,
     "unavailable": false,
     "name": "IL MASTIO - LITHA BLANCHE"
+  },
+  "sherazade": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "SHERAZADE"
   }
 }
