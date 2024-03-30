@@ -284,5 +284,10 @@
     "hidden": false,
     "unavailable": false,
     "name": "PATATINE FRITTE*"
+  },
+  "bounty": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "CHEESECAKE BOUNTY**"
   }
 }
