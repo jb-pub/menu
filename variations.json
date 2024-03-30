@@ -60,8 +60,8 @@
     "name": "MURPHY'S RED"
   },
   "jb mix": {
-    "hidden": true,
-    "unavailable": true,
+    "hidden": false,
+    "unavailable": false,
     "name": "JB MIX"
   },
   "magners_pera": {
