@@ -127,8 +127,8 @@
     "name": "PIATTO WURSTEL"
   },
   "chicken_fingers": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "CHICKEN FINGERS*"
   },
   "piada_cotto": {
