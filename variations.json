@@ -86,7 +86,7 @@
   },
   "bitburg_nf": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "BITBURGER NON FILTRATA"
   },
   "mozza": {
