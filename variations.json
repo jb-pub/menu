@@ -62,7 +62,7 @@
   },
   "jb mix": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "JB MIX"
   },
   "magners_pera": {
