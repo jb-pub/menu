@@ -294,5 +294,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "AMARO DEL CAPO"
+  },
+  "chicken_bites": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "CHICKEN BITES*"
   }
 }
