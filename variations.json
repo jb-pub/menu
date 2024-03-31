@@ -229,7 +229,7 @@
   },
   "hope": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "MASTINO - IPA HOP.E"
   },
   "anima_nera": {
