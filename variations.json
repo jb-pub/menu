@@ -13,7 +13,7 @@
   },
   "guinness": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "GUINNESS IRISH STOUT"
   },
   "slalom": {
