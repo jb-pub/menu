@@ -278,7 +278,7 @@
   },
   "salutare": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "SALUTARE"
   },
   "pata": {
