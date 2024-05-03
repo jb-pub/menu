@@ -305,5 +305,9 @@
     "hidden": true,
     "unavailable": false,
     "name": "ALCHEMIST - IGNIFER"
+  },
+  "tellus": {
+    "hidden": true,
+    "name": "ALCHEMIST - TELLUS"
   }
 }
