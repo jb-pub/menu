@@ -262,7 +262,7 @@
     "name": "BIRRA MASTINO - BERN"
   },
   "alette": {
-    "hidden": true,
+    "hidden": false,
     "unavailable": false,
     "name": "ALETTE DI POLLO*"
   },
