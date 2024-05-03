@@ -300,5 +300,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "CHICKEN BITES*"
+  },
+  "ignifer": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "ALCHEMIST - IGNIFER"
   }
 }
