@@ -32,7 +32,9 @@
     "hidden": true,
     "name": "LA CLASSICA"
   },
-  "undefined": {},
+  "undefined": {
+    "unavailable": true
+  },
   "augustiner": {
     "hidden": false,
     "unavailable": false,
