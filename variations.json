@@ -300,7 +300,7 @@
   },
   "chicken_bites": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "CHICKEN BITES*"
   },
   "ignifer": {
