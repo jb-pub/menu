@@ -311,5 +311,10 @@
   "tellus": {
     "hidden": true,
     "name": "ALCHEMIST - TELLUS"
+  },
+  "galva_limonata": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "LIMONATA GALVANINA"
   }
 }
