@@ -351,5 +351,10 @@
   "nusa_cana_scuro": {
     "hidden": true,
     "name": "NUSA CANA SCURO"
+  },
+  "vodka_eristoff": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "VODKA ERISTOFF"
   }
 }
