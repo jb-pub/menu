@@ -347,5 +347,9 @@
     "hidden": true,
     "unavailable": false,
     "name": "NUSA CANA BIANCO"
+  },
+  "nusa_cana_scuro": {
+    "hidden": true,
+    "name": "NUSA CANA SCURO"
   }
 }
