@@ -314,7 +314,7 @@
   },
   "galva_limonata": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "LIMONATA GALVANINA"
   }
 }
