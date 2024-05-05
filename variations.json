@@ -351,5 +351,9 @@
     "hidden": true,
     "unavailable": false,
     "name": "VODKA ERISTOFF"
+  },
+  "essenza": {
+    "hidden": true,
+    "name": "ALCHEMIST - ESSENZA"
   }
 }
