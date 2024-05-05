@@ -295,7 +295,7 @@
   },
   "amaro_capo": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "AMARO DEL CAPO"
   },
   "chicken_bites": {
