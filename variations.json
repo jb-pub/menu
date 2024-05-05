@@ -236,7 +236,7 @@
   },
   "anima_nera": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "ANIMA NERA"
   },
   "il_roggio": {
