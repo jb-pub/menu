@@ -342,5 +342,10 @@
   "jameson": {
     "hidden": true,
     "name": "JAMESON"
+  },
+  "nusa_cana_chiaro": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "NUSA CANA BIANCO"
   }
 }
