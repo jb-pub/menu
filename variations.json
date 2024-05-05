@@ -325,5 +325,9 @@
     "hidden": true,
     "unavailable": false,
     "name": "BRUGAL BLANCO"
+  },
+  "four_roses": {
+    "hidden": true,
+    "name": "FOUR ROSES"
   }
 }
