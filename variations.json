@@ -329,5 +329,10 @@
   "four_roses": {
     "hidden": true,
     "name": "FOUR ROSES"
+  },
+  "gin_mare": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "GIN MARE"
   }
 }
