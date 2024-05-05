@@ -320,5 +320,10 @@
   "brugal_scuro": {
     "hidden": true,
     "name": "BRUGAL ANEJO"
+  },
+  "brugal_chiaro": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "BRUGAL BLANCO"
   }
 }
