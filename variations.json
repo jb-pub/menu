@@ -316,5 +316,9 @@
     "hidden": false,
     "unavailable": false,
     "name": "LIMONATA GALVANINA"
+  },
+  "brugal_scuro": {
+    "hidden": true,
+    "name": "BRUGAL ANEJO"
   }
 }
