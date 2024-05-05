@@ -338,5 +338,9 @@
   "gin_bombay": {
     "hidden": true,
     "name": "GIN BOMBAY"
+  },
+  "jameson": {
+    "hidden": true,
+    "name": "JAMESON"
   }
 }
