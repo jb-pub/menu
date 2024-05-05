@@ -334,5 +334,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "GIN MARE"
+  },
+  "gin_bombay": {
+    "hidden": true,
+    "name": "GIN BOMBAY"
   }
 }
