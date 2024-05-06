@@ -87,7 +87,7 @@
     "name": "PORTA BRUCIATA - ORIFIAMMA"
   },
   "bitburg_nf": {
-    "hidden": false,
+    "hidden": true,
     "unavailable": false,
     "name": "BITBURGER NON FILTRATA"
   },
