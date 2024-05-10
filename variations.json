@@ -153,7 +153,7 @@
   },
   "pulled_bites": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PULLED PORK BITES*"
   },
   "oktober_bretzel": {
