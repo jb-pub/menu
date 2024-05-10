@@ -206,7 +206,7 @@
     "name": "SIDRO MAGNERS MELA"
   },
   "bbq_ribs": {
-    "hidden": true,
+    "hidden": false,
     "name": "BBQ RIBS"
   },
   "sweetie": {
