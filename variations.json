@@ -355,5 +355,9 @@
   "essenza": {
     "hidden": true,
     "name": "ALCHEMIST - ESSENZA"
+  },
+  "falling_apple_rose": {
+    "hidden": true,
+    "name": "FALLING APPLE ROSÉ"
   }
 }
