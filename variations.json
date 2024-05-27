@@ -357,7 +357,8 @@
     "name": "ALCHEMIST - ESSENZA"
   },
   "falling_apple_rose": {
-    "hidden": true,
+    "hidden": false,
+    "unavailable": true,
     "name": "FALLING APPLE ROSÉ"
   },
   "tulum_neipa": {
