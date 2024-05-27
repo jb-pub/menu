@@ -43,7 +43,7 @@
   "jala ": {
     "hidden": false,
     "unavailable": false,
-    "name": "JALAPEÑOS*"
+    "name": "JALAPEÃ‘OS*"
   },
   "anelli": {
     "hidden": true,
@@ -215,7 +215,7 @@
     "name": "RENTON - SWEETIE"
   },
   "la_pallata": {
-    "hidden": false,
+    "hidden": true,
     "unavailable": false,
     "name": "PORTA BRUCIATA - LA PALLATA"
   },
@@ -358,6 +358,6 @@
   },
   "falling_apple_rose": {
     "hidden": true,
-    "name": "FALLING APPLE ROS�"
+    "name": "FALLING APPLE ROSÉ"
   }
 }
