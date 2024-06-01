@@ -364,5 +364,10 @@
   "tulum_neipa": {
     "hidden": true,
     "name": "TULUM NE IPA"
+  },
+  "pulled_piatto": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "PULLED PORK"
   }
 }
