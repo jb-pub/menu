@@ -369,5 +369,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "PULLED PORK"
+  },
+  "menabrea_nf": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "MENABREA NON FILTRATA"
   }
 }
