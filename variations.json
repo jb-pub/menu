@@ -74,7 +74,7 @@
   },
   "verdemare": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "VERDEMARE"
   },
   "long john": {
