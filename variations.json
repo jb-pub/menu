@@ -374,5 +374,10 @@
     "hidden": false,
     "unavailable": false,
     "name": "MENABREA NON FILTRATA"
+  },
+  "menabrea_weiss": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "MENABREA WEISS"
   }
 }
