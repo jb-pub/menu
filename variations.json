@@ -367,7 +367,7 @@
   },
   "pulled_piatto": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PULLED PORK"
   },
   "menabrea_nf": {
