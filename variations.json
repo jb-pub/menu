@@ -152,8 +152,8 @@
     "name": "MASTINO PILS 1291"
   },
   "pulled_bites": {
-    "hidden": true,
-    "unavailable": false,
+    "hidden": false,
+    "unavailable": true,
     "name": "PULLED PORK BITES*"
   },
   "oktober_bretzel": {
