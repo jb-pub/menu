@@ -384,5 +384,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "SEMIFREDDO AI FRUTTI DI BOSCO"
+  },
+  "ronin_pale_ale": {
+    "hidden": true,
+    "name": "RONIN PALE ALE"
   }
 }
