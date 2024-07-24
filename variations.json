@@ -362,7 +362,7 @@
     "name": "FALLING APPLE ROSÉ"
   },
   "tulum_neipa": {
-    "hidden": false,
+    "hidden": true,
     "name": "TULUM NE IPA"
   },
   "pulled_piatto": {
