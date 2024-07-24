@@ -152,7 +152,7 @@
     "name": "MASTINO PILS 1291"
   },
   "pulled_bites": {
-    "hidden": false,
+    "hidden": true,
     "unavailable": false,
     "name": "PULLED PORK BITES*"
   },
@@ -189,7 +189,7 @@
   },
   "pulled_burger": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PULLED PORK BURGER"
   },
   "nevone": {
@@ -367,12 +367,22 @@
   },
   "pulled_piatto": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PULLED PORK"
   },
   "menabrea_nf": {
     "hidden": false,
     "unavailable": false,
     "name": "MENABREA NON FILTRATA"
+  },
+  "menabrea_weiss": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "MENABREA WEISS"
+  },
+  "semifreddo_passion": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "SEMIFREDDO AI FRUTTI DI BOSCO"
   }
 }
