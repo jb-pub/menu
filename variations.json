@@ -388,5 +388,10 @@
   "ronin_pale_ale": {
     "hidden": true,
     "name": "RONIN PALE ALE"
+  },
+  "tass_cedr": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "CEDRATA "
   }
 }
