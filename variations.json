@@ -391,7 +391,7 @@
   },
   "tass_cedr": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "CEDRATA "
   }
 }
