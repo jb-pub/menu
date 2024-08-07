@@ -189,7 +189,7 @@
   },
   "pulled_burger": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "PULLED PORK BURGER"
   },
   "nevone": {
