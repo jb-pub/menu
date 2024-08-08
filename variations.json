@@ -402,5 +402,10 @@
   "aeris_ft": {
     "hidden": true,
     "name": "AERIS PILS - ALCHEMIST ALE"
+  },
+  "pepitos_gourmet": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "PEPITOS DI POLLO"
   }
 }
