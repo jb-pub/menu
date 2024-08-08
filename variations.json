@@ -398,5 +398,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "FALLING APPLE IRISH CIDER"
+  },
+  "aeris_ft": {
+    "hidden": true,
+    "name": "AERIS PILS - ALCHEMIST ALE"
   }
 }
