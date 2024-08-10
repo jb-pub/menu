@@ -396,7 +396,7 @@
   },
   "falling_apple": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "FALLING APPLE IRISH CIDER"
   },
   "aeris_ft": {
