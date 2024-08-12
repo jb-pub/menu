@@ -407,5 +407,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "PEPITOS DI POLLO"
+  },
+  "galva_te_pesca": {
+    "hidden": true,
+    "name": "TE FREDDO PESCA"
   }
 }
