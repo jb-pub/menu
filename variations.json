@@ -411,5 +411,9 @@
   "galva_te_pesca": {
     "hidden": true,
     "name": "TE FREDDO PESCA"
+  },
+  "chili_carne": {
+    "hidden": true,
+    "name": "CHILI CON CARNE"
   }
 }
