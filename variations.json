@@ -415,5 +415,9 @@
   "chili_carne": {
     "hidden": true,
     "name": "CHILI CON CARNE"
+  },
+  "round_trip_ipa": {
+    "hidden": true,
+    "name": "ROUND TRIP IPA"
   }
 }
