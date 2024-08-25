@@ -419,5 +419,10 @@
   "round_trip_ipa": {
     "hidden": true,
     "name": "ROUND TRIP IPA"
+  },
+  "galva_limonata": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "LIMONATA"
   }
 }
