@@ -424,5 +424,9 @@
     "hidden": true,
     "unavailable": false,
     "name": "LIMONATA"
+  },
+  "galva_chinotto": {
+    "hidden": true,
+    "name": "CHINOTTO"
   }
 }
