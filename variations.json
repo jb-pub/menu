@@ -428,5 +428,9 @@
   "galva_chinotto": {
     "hidden": true,
     "name": "CHINOTTO"
+  },
+  "galva_melagrana": {
+    "hidden": true,
+    "name": "MELAGRANA"
   }
 }
