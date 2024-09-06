@@ -421,7 +421,7 @@
     "name": "ROUND TRIP IPA"
   },
   "galva_limonata": {
-    "hidden": true,
+    "hidden": false,
     "unavailable": false,
     "name": "LIMONATA"
   },
