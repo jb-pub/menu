@@ -409,7 +409,7 @@
     "name": "PEPITOS DI POLLO"
   },
   "galva_te_pesca": {
-    "hidden": true,
+    "hidden": false,
     "name": "TE FREDDO PESCA"
   },
   "chili_carne": {
