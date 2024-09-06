@@ -430,7 +430,7 @@
     "name": "CHINOTTO"
   },
   "galva_melagrana": {
-    "hidden": true,
+    "hidden": false,
     "name": "MELAGRANA"
   }
 }
