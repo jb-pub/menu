@@ -426,7 +426,7 @@
     "name": "LIMONATA"
   },
   "galva_chinotto": {
-    "hidden": true,
+    "hidden": false,
     "name": "CHINOTTO"
   },
   "galva_melagrana": {
