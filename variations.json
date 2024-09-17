@@ -265,7 +265,7 @@
   },
   "alette": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "ALETTE DI POLLO*"
   },
   "blanche": {
