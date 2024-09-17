@@ -46,8 +46,8 @@
     "name": "JALAPENOS"
   },
   "anelli": {
-    "hidden": true,
-    "unavailable": true,
+    "hidden": false,
+    "unavailable": false,
     "name": "ANELLI DI CIPOLLA*"
   },
   "affligem": {
