@@ -226,7 +226,7 @@
                         <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
                     </div>
                 </div>
-                <div style="min-height: 18vh; width: 100%; background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>
+                <!--<div style="min-height: 18vh; width: 100%; background-image: url(./images/jb_logo.png); background-repeat: no-repeat; background-position: center; background-size: contain;"></div>-->
             </div>
         </div>
         <div class="backdrop" onclick="closeImagePopup()">
@@ -289,7 +289,7 @@ var page = new Vue({
     },
     computed: {
         visibleCategories() {
-            return this.categories.filter(cat => cat.id != 'distillati_shots_co')
+            return this.categories
         },
         currentSubcategory() {
             let visibleSubcategories = []

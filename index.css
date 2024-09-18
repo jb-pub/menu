@@ -184,9 +184,10 @@ body {
     height: 100vh;
     margin: 0px;
     /*background-image: url("./images/bckgrnd_img_JB_menu_2.jpg");*/
-    background-image: url("./images/sfondo_verde.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("./images/logo_semi_trasparente.png"), url("./images/sfondo_verde.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover;
+    background-position: center center;
 }
 /* LAYOUT */
 #page {
@@ -232,8 +233,8 @@ body {
     grid-template-columns: 1fr 1.5fr 0.5fr;
     /* justify-content: center; */
 
-    margin: 3vh 2vw;
-    height: 12vh;
+    margin: 2vh 2vw;
+    height: 10vh;
 
     padding: 0vh 2vw;
 
