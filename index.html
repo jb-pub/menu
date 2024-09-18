@@ -125,14 +125,14 @@
             </div>
         </div>
 
-        <div id="page" style="position:fixed; left: 0; top: 0; visibility: visible;">
+        <div id="page" style="position:fixed; left: 0; top: 0; visibility: visible;" >
             <!-- <div class="logo"></div> -->
-            <div v-if="currentCategory">
-                <div class="category-box box">
+            <div v-if="currentCategory" v-cloak>
+                <div class="category-box box" v-cloak>
                     <div style="margin-right: 5vw; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/categories/' + currentCategory.id + '.jpg\')'}"></div>
                     <div class="category-title" v-on:click="currentCategory.selected = false; currentCategory = null;">
                         <!-- <div style="display: grid; grid-template-rows: 1fr 1fr;"> -->
-                        <div v-bind:class="{ 'subcategory-header': currentSubcategory }">
+                        <div v-bind:class="{ 'subcategory-header': currentSubcategory }" v-cloak>
                             <div>{{currentCategory.name}}</div>
                         </div>
                     </div>
@@ -214,9 +214,9 @@
     
                 </div>
             </div>
-            <div class="categories-column" v-if="!currentCategory">
+            <div class="categories-column" v-if="!currentCategory" v-cloak>
                 <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
-                <div v-for="category in visibleCategories">
+                <div v-for="category in visibleCategories" v-cloak>
                     <!-- <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;"> -->
                     <div class="category-box box" v-on:click="category.selected = true; currentCategory = category;">
                         <!-- <div class="category-image"></div> -->

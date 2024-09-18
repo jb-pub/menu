@@ -16,6 +16,10 @@ a.nostyle:visited {
 
 /**/
 
+[v-cloak] {
+    display: none;
+}
+
 .popup-square {
     top: 50%;
     left: 50%;
