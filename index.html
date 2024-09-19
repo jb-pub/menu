@@ -248,7 +248,7 @@
 var page = new Vue({
     el: '#page',
     data: {
-        stickyHeader: null,
+        anyHeaderVisible: null,
         homeClosed: false,
         observer: null,
         currentCategory: null,
@@ -363,15 +363,19 @@ var page = new Vue({
         onElementObserved(entries) {
             //entries.forEach(e => console.log(e.isIntersecting, e.target.className, e.target.dataset.subcategoryId))
 
-            let anyHeaderVisible = entries.filter(e => e.isIntersecting && e.target.className.includes("subcategory-box")).length > 0
+            let headerEntries = entries.filter(e => e.target.className.includes("subcategory-box"))
+            
+            if (headerEntries)
+                this.anyHeaderVisible = headerEntries.filter(e => e.isIntersecting).length > 0
+
             let itemEntry = entries.filter(e => e.isIntersecting && !e.target.dataset.subcategoryHeader && e.target.dataset.subcategoryId).map(e => [e.target.dataset.categoryId, e.target.dataset.subcategoryId])[0]
 
-            console.log(anyHeaderVisible, itemEntry)
+            console.log(this.anyHeaderVisible, itemEntry)
 
-            if (anyHeaderVisible)
+            if (this.anyHeaderVisible)
                 this.currentSubcategory = null;
 
-            if (itemEntry && !anyHeaderVisible) {
+            if (itemEntry && !this.anyHeaderVisible) {
 
                 let [currentCategoryId, currentSubcategoryId] = [itemEntry[0], itemEntry[1]]
                 let currentSubcategory = currentCategoryId && currentSubcategoryId ? this.lookup(currentCategoryId, currentSubcategoryId) : null
