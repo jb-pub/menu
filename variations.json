@@ -358,7 +358,7 @@
   },
   "falling_apple_rose": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "FALLING APPLE ROSÉ"
   },
   "tulum_neipa": {
