@@ -147,11 +147,11 @@
                 </div>
                 <div class="items-container">
                     <div v-for="subcategory in currentCategory.subcategories" v-if="!subcategory.hidden">
-                        <div class="subcategory-box box observable" v-on:click="toggleSubcategory(subcategory)" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
+                        <div v-if="currentCategory.subcategories.length > 1" class="subcategory-box box observable" v-on:click="toggleSubcategory(subcategory)" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
                             <div class="subcategory-title">{{subcategory.name}}</div>
                             <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
                         </div>
-                        <div v-if="subcategory.expanded">
+                        <div v-if="subcategory.expanded || currentCategory.subcategories.length == 1">
 
                             <div v-for="item in subcategory.items" v-if="!item.hidden" style="position: relative;" class="observable" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
 
@@ -297,7 +297,7 @@ var page = new Vue({
 
             let subcat = this.categories.flatMap(c => c.subcategories.flatMap(s => s.expanded && s.stickyHeader ? [s] : []))[0]
 
-            console.log(subcat)
+            //console.log(subcat)
 
             return subcat;
 
