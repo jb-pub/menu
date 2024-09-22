@@ -130,13 +130,13 @@
             <div v-if="currentCategory" v-cloak>
                 <div class="category-box box" v-cloak>
                     <div style="margin-right: 5vw; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/categories/' + currentCategory.id + '.jpg\')'}"></div>
-                    <div class="category-title" v-on:click="currentCategory.selected = false; currentCategory = null;">
+                    <div class="category-title" v-on:click="currentCategory.selected = false; currentCategory = null; clearCurrentSubcategory();">
                         <!-- <div style="display: grid; grid-template-rows: 1fr 1fr;"> -->
                         <!--<div v-bind:class="{ 'subcategory-header': currentSubcategory }" v-cloak>-->
                             <div>{{currentCategory.name}}</div>
                         <!--</div>-->
                     </div>
-                    <div class="category-button minus" v-on:click="currentCategory.selected = false; currentCategory = null;"></div>
+                    <div class="category-button minus" v-on:click="currentCategory.selected = false; currentCategory = null; clearCurrentSubcategory();"></div>
                     <!-- <div class="category-subtitle">SOTTOTITOLO</div> -->
                 </div>          
                 <div class="subcategory-box box" v-if="currentSubcategory" v-on:click="toggleSubcategory(currentSubcategory)">
@@ -147,7 +147,7 @@
                 </div>
                 <div class="items-container">
                     <div v-for="subcategory in currentCategory.subcategories" v-if="!subcategory.hidden">
-                        <div v-if="currentSubcategory != subcategory" class="subcategory-box box observable" v-on:click="toggleSubcategory(subcategory)" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
+                        <div class="subcategory-box box observable" v-on:click="toggleSubcategory(subcategory)" v-bind:data-category-id="currentCategory.id" v-bind:data-subcategory-id="subcategory.id">
                             <div class="subcategory-title">{{subcategory.name}}</div>
                             <div class="category-button" v-bind:class="{'minus':subcategory.expanded, 'plus':!subcategory.expanded}"></div>
                         </div>
@@ -216,7 +216,7 @@
             </div>
             <div class="categories-column" v-if="!currentCategory" v-cloak>
                 <!-- <div v-for="category in categories" v-bind:category="category" v-bind:style="{ 'background-image': 'url(\'./images/JB.macro.headers_' + category.id + '_ita.jpg\')'}"> -->
-                <div v-for="category in visibleCategories" v-cloak>
+                <div v-for="category in categories" v-cloak>
                     <!-- <div class="category-box box" v-on:click="category.selected = !category.selected; currentCategory = category.selected ? category : null;"> -->
                     <div class="category-box box" v-on:click="category.selected = true; currentCategory = category;">
                         <!-- <div class="category-image"></div> -->
@@ -248,11 +248,9 @@
 var page = new Vue({
     el: '#page',
     data: {
-        anyHeaderVisible: null,
         homeClosed: false,
         observer: null,
         currentCategory: null,
-        currentSubcategory: null,
         categories: [],
         infos: {
             "celery": { "name": "Sedano" },
@@ -290,10 +288,18 @@ var page = new Vue({
         // ]
     },
     computed: {
+        /*
         visibleCategories() {
             return this.categories
         },
-        //currentSubcategory() {
+        */
+        currentSubcategory() {
+
+            let subcat = this.categories.flatMap(c => c.subcategories.flatMap(s => s.expanded && s.stickyHeader ? [s] : []))[0]
+
+            console.log(subcat)
+
+            return subcat;
 
             /*
             let visibleSubcategories = []
@@ -315,7 +321,7 @@ var page = new Vue({
             if (visibleSubcategories.length != 1 || anyHeaderVisible) return null
             else return visibleSubcategories[0]
             */
-        //}
+        }
     },
     methods: {
         // showTooltip(event) {
@@ -330,6 +336,17 @@ var page = new Vue({
         //         }
         //     }).show()
         // },
+        clearCurrentSubcategory() {
+            this.categories.forEach((category) => {
+                category.subcategories.forEach((subcategory) => {
+                    subcategory.expanded = false;
+                    subcategory.stickyHeader = false;
+                })
+            })
+            // TODO
+            this.categories.push({})
+            this.categories.pop()
+        },
         toggleSubcategory(subcategory) {
             if (!subcategory.expanded) { 
                 this.categories.forEach(cat => {
@@ -337,6 +354,7 @@ var page = new Vue({
                         cat.subcategories.forEach(subcat => {
                             if (subcat != subcategory)
                                 subcat.expanded = false
+                            subcat.stickyHeader = false
                         })
                     }
                 })
@@ -363,12 +381,37 @@ var page = new Vue({
         onElementObserved(entries) {
             //entries.forEach(e => console.log(e.isIntersecting, e.target.className, e.target.dataset.subcategoryId))
 
+            let headersOut = entries.filter(e => e.target.className.includes("subcategory-box") && !e.isIntersecting)
+
+            headersOut.forEach(e => {
+                let headerCat = this.lookup(e.target.dataset.categoryId, e.target.dataset.subcategoryId)
+                if (headerCat.expanded){
+                    headerCat.stickyHeader = true
+                    //console.log(headerCat)
+                }
+            })
+
+            let headersIn = entries.filter(e => e.target.className.includes("subcategory-box") && e.isIntersecting)
+
+            headersIn.forEach(e => {
+                let headerCat = this.lookup(e.target.dataset.categoryId, e.target.dataset.subcategoryId)
+                if (headerCat.stickyHeader) {
+                    headerCat.stickyHeader = false
+                    //console.log(headerCat)
+                }
+            })
+
+            // TODO
+            this.categories.push({})
+            this.categories.pop()
+
+            /*
             let headerEntries = entries.filter(e => e.target.className.includes("subcategory-box"))
             
             if (headerEntries)
                 this.anyHeaderVisible = headerEntries.filter(e => e.isIntersecting).length > 0
 
-            let itemEntry = entries.filter(e => e.isIntersecting && !e.target.dataset.subcategoryHeader && e.target.dataset.subcategoryId).map(e => [e.target.dataset.categoryId, e.target.dataset.subcategoryId])[0]
+            let itemEntry = entries.filter(e => e.isIntersecting && !e.target.className.includes("subcategory-box") && e.target.dataset.subcategoryId).map(e => [e.target.dataset.categoryId, e.target.dataset.subcategoryId])[0]
 
             console.log(this.anyHeaderVisible, itemEntry)
 
@@ -383,6 +426,7 @@ var page = new Vue({
                 console.log(currentSubcategory)
                 this.currentSubcategory = currentSubcategory
             }
+            */
 
             //let anyHeaderVisible = entries.filter(e => e.isIntersecting && e.target.className.includes("subcategory-box")).length > 0
             //let currentSubcategory = entries.filter(e => e.isIntersecting).map(e => e.target.dataset.subcategoryId)[0]
@@ -442,7 +486,7 @@ var page = new Vue({
                 let context = jsons[0]
                 let variations = jsons[1]
 
-                console.log(context, variations)
+                //console.log(context, variations)
                 
                 context.categories.forEach(category => {
                     category.selected = false
