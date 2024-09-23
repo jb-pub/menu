@@ -436,5 +436,10 @@
   "aditus_ft": {
     "hidden": true,
     "name": "ADITUS APA - ALCHEMIST ALE"
+  },
+  "asado_ribs": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "ASADO RIBS"
   }
 }
