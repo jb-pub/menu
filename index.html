@@ -354,12 +354,19 @@ var page = new Vue({
                         cat.subcategories.forEach(subcat => {
                             if (subcat != subcategory)
                                 subcat.expanded = false
+                            if (subcat == subcategory) {
+                                
+                            }
                             subcat.stickyHeader = false
                         })
                     }
                 })
             }
             subcategory.expanded  = !subcategory.expanded
+            
+            if (subcategory.expanded) {
+                window.scrollTo(0, 0);
+            }
         },
         showImagePopup(src) {
             let backdrop = document.getElementsByClassName("backdrop")[0]
