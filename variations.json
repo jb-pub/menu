@@ -122,12 +122,12 @@
     "name": "NOB HILL IPA"
   },
   "oktober_stinco": {
-    "hidden": true,
-    "name": "STINCO BAVARESE"
+    "hidden": false,
+    "name": "MENU STINCO"
   },
   "oktober_wurst": {
-    "hidden": true,
-    "name": "PIATTO WURSTEL"
+    "hidden": false,
+    "name": "MENU WURSTEL"
   },
   "chicken_fingers": {
     "hidden": true,
