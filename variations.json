@@ -36,8 +36,8 @@
     "unavailable": true
   },
   "augustiner": {
-    "hidden": true,
-    "unavailable": true,
+    "hidden": false,
+    "unavailable": false,
     "name": "AUGUSTINER EDELSTOFF"
   },
   "jala ": {
