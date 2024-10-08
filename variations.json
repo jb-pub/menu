@@ -207,6 +207,7 @@
   },
   "bbq_ribs": {
     "hidden": false,
+    "unavailable": true,
     "name": "BBQ RIBS"
   },
   "sweetie": {
