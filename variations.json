@@ -443,5 +443,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "ASADO RIBS"
+  },
+  "altotevere_fritz": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "ALTOTEVERE FRITZ"
   }
 }
