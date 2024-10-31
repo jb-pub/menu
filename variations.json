@@ -450,7 +450,7 @@
     "name": "ALTOTEVERE FRITZ"
   },
   "chouffe_blonde": {
-    "hidden": true,
+    "hidden": false,
     "name": "CHOUFFE BLONDE"
   }
 }
