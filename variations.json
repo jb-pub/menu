@@ -452,5 +452,9 @@
   "chouffe_blonde": {
     "hidden": false,
     "name": "CHOUFFE BLONDE"
+  },
+  "americano": {
+    "hidden": true,
+    "name": "AMERICANO"
   }
 }
