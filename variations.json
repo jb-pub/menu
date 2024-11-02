@@ -460,5 +460,9 @@
   "negroni_sb": {
     "hidden": true,
     "name": "NEGRONI SBAGLIATO"
+  },
+  "negroni": {
+    "hidden": true,
+    "name": "NEGRONI"
   }
 }
