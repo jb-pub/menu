@@ -315,7 +315,7 @@
     "name": "ALCHEMIST - TELLUS"
   },
   "brugal_scuro": {
-    "hidden": true,
+    "hidden": false,
     "name": "BRUGAL ANEJO"
   },
   "brugal_chiaro": {
