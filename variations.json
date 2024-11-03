@@ -454,7 +454,7 @@
     "name": "CHOUFFE BLONDE"
   },
   "americano": {
-    "hidden": true,
+    "hidden": false,
     "name": "AMERICANO"
   },
   "negroni_sb": {
