@@ -271,8 +271,8 @@
     "name": "ALETTE DI POLLO*"
   },
   "blanche": {
-    "hidden": false,
-    "unavailable": false,
+    "hidden": true,
+    "unavailable": true,
     "name": "LITHA BLANCHE"
   },
   "sherazade": {
