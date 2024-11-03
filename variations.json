@@ -458,7 +458,7 @@
     "name": "AMERICANO"
   },
   "negroni_sb": {
-    "hidden": true,
+    "hidden": false,
     "name": "NEGRONI SBAGLIATO"
   },
   "negroni": {
