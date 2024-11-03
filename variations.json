@@ -462,7 +462,7 @@
     "name": "NEGRONI SBAGLIATO"
   },
   "negroni": {
-    "hidden": true,
+    "hidden": false,
     "name": "NEGRONI"
   }
 }
