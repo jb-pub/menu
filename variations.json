@@ -464,5 +464,10 @@
   "negroni": {
     "hidden": false,
     "name": "NEGRONI"
+  },
+  "olive_ascolane": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "OLIVE ASCOLANE"
   }
 }
