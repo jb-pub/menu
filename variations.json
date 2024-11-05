@@ -469,5 +469,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "OLIVE ASCOLANE"
+  },
+  "cloudburst_ipa": {
+    "hidden": true,
+    "unavailable": false,
+    "name": "CLOUDBURST\nHAZY IPA"
   }
 }
