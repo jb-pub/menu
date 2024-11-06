@@ -479,5 +479,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "PORTO SANDEMAN"
+  },
+  "pata_country": {
+    "hidden": true,
+    "name": "PATATE COUNTY STYLE"
   }
 }
