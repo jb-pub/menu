@@ -337,7 +337,7 @@
     "name": "GIN BOMBAY"
   },
   "jameson": {
-    "hidden": true,
+    "hidden": false,
     "name": "JAMESON"
   },
   "nusa_cana_chiaro": {
