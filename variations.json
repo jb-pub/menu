@@ -483,5 +483,10 @@
   "pata_country": {
     "hidden": true,
     "name": "PATATE COUNTY STYLE"
+  },
+  "gin_malfy": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "GIN MALFY ROSA"
   }
 }
