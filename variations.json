@@ -501,5 +501,10 @@
   "gin_hendrix": {
     "hidden": true,
     "name": "GIN HENDRICKS"
+  },
+  "moscow_mule": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "MOSCOW MULE"
   }
 }
