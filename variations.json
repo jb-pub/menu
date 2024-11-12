@@ -493,5 +493,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "CROSTATA AL LIMONE"
+  },
+  "disaronno": {
+    "hidden": true,
+    "name": "DISARONNO"
   }
 }
