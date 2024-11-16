@@ -467,7 +467,7 @@
   },
   "olive_ascolane": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "OLIVE ASCOLANE"
   },
   "cloudburst_ipa": {
