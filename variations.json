@@ -217,7 +217,7 @@
     "name": "RENTON - SWEETIE"
   },
   "la_pallata": {
-    "hidden": true,
+    "hidden": false,
     "unavailable": false,
     "name": "LA PALLATA AMERICAN PALE ALE"
   },
