@@ -208,7 +208,7 @@
   },
   "bbq_ribs": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "BBQ RIBS"
   },
   "sweetie": {
@@ -441,7 +441,7 @@
   },
   "asado_ribs": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "ASADO RIBS"
   },
   "altotevere_fritz": {
