@@ -491,7 +491,7 @@
   },
   "torta_limone": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "CROSTATA AL LIMONE"
   },
   "disaronno": {
