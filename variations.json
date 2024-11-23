@@ -511,5 +511,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "COCA COLA"
+  },
+  "Gin_ton": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "GIN TONIC"
   }
 }
