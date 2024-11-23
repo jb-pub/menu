@@ -407,7 +407,7 @@
   },
   "pepitos_gourmet": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "PEPITOS DI POLLO"
   },
   "galva_te_pesca": {
