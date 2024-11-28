@@ -516,5 +516,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "GIN TONIC"
+  },
+  "special_ottobre": {
+    "hidden": true,
+    "name": "MARK ZUKKEBERG"
   }
 }
