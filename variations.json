@@ -292,7 +292,7 @@
   },
   "bounty": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "CHEESECAKE BOUNTY**"
   },
   "amaro_capo": {
@@ -511,5 +511,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "COCA COLA"
+  },
+  "Gin_ton": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "GIN TONIC"
   }
 }
