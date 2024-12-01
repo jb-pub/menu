@@ -520,5 +520,10 @@
   "special_ottobre": {
     "hidden": true,
     "name": "MARK ZUKKEBERG"
+  },
+  "john barley": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "JOHN BARLEYCORN"
   }
 }
