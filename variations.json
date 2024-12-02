@@ -525,5 +525,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "JOHN BARLEYCORN"
+  },
+  "veggy_ricotta": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "VEGGY E RICOTTA"
   }
 }
