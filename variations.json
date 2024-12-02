@@ -530,5 +530,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "VEGGY E RICOTTA"
+  },
+  "veggy_burger": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "VEGGY BURGER"
   }
 }
