@@ -26,7 +26,7 @@
   },
   "crispy chick": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "CRISPY CHICK"
   },
   "piada_classica": {
