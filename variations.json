@@ -292,7 +292,7 @@
   },
   "bounty": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "CHEESECAKE BOUNTY**"
   },
   "amaro_capo": {
