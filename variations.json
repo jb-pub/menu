@@ -550,5 +550,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "HAVANA 7"
+  },
+  "bacon bbq": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "BACON & BBQ"
   }
 }
