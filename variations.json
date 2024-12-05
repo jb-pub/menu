@@ -523,7 +523,7 @@
   },
   "john barley": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "JOHN BARLEYCORN"
   },
   "veggy_ricotta": {
