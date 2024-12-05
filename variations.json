@@ -553,7 +553,7 @@
   },
   "bacon bbq": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "BACON & BBQ"
   }
 }
