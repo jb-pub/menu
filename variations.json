@@ -486,7 +486,7 @@
   },
   "gin_malfy": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "GIN MALFY ROSA"
   },
   "torta_limone": {
