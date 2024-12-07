@@ -514,7 +514,7 @@
   },
   "Gin_ton": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "GIN TONIC"
   },
   "special_ottobre": {
