@@ -333,7 +333,7 @@
     "name": "GIN MARE"
   },
   "gin_bombay": {
-    "hidden": true,
+    "hidden": false,
     "name": "GIN BOMBAY"
   },
   "jameson": {
