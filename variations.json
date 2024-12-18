@@ -533,7 +533,7 @@
   },
   "veggy_burger": {
     "hidden": false,
-    "unavailable": true,
+    "unavailable": false,
     "name": "VEGGY BURGER"
   },
   "bortolomiol": {
