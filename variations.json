@@ -186,6 +186,7 @@
   },
   "amarcord_raccolto": {
     "hidden": false,
+    "unavailable": true,
     "name": "AMARCORD DEL RACCOLTO"
   },
   "pulled_burger": {
