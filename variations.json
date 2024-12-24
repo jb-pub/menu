@@ -560,5 +560,10 @@
     "hidden": false,
     "unavailable": true,
     "name": "TERIYAKI STICKS"
+  },
+  "CHI": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "SALSA CHIMICHURRI"
   }
 }
