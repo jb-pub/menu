@@ -555,5 +555,10 @@
     "hidden": false,
     "unavailable": false,
     "name": "BACON & BBQ"
+  },
+  "teriyaki_sticks": {
+    "hidden": false,
+    "unavailable": true,
+    "name": "TERIYAKI STICKS"
   }
 }
