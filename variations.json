@@ -185,8 +185,8 @@
     "name": "RENTON - NEW ORDER"
   },
   "amarcord_raccolto": {
-    "hidden": false,
-    "unavailable": true,
+    "hidden": true,
+    "unavailable": false,
     "name": "AMARCORD DEL RACCOLTO"
   },
   "pulled_burger": {
