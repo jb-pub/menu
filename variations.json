@@ -273,7 +273,7 @@
   },
   "blanche": {
     "hidden": false,
-    "unavailable": false,
+    "unavailable": true,
     "name": "LITHA BLANCHE"
   },
   "sherazade": {
