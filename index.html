@@ -165,7 +165,7 @@
                                         <div style="display: grid; grid-template-columns: 0.6fr 1.4fr; column-gap: 2vw; height: 15vh;">
 
                                             <!-- <div style="background-image: url(./images/magnifier.png); background-repeat: no-repeat; background-position: center; background-size: contain;"> -->
-                                            <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'./images/items/thumbs/' + item.id + '_t.jpg\')'}" v-on:click="showImagePopup('./images/items/pics/' + item.id + '.jpg')"></div>
+                                            <div style="width: 15vh; background-repeat: no-repeat; background-position: center; background-size: contain;" v-bind:style="{ 'background-image': 'url(\'https://ristoro-backend-dev-5f547f8588fc.herokuapp.com/v2/menu/image/' + item.id + '_t\')'}" v-on:click="showImagePopup('https://ristoro-backend-dev-5f547f8588fc.herokuapp.com/v2/menu/image/' + item.id)"></div>
 
                                             <div class="item-title-bar">
                                                 <div class="item-title">{{item.name}}</div>
@@ -484,14 +484,14 @@ var page = new Vue({
         this.observer = new IntersectionObserver(this.onElementObserved, options);
 
         Promise.all([
-            fetch("./context.json"),
+            fetch("https://ristoro-backend-dev-5f547f8588fc.herokuapp.com/v2/menu"),
             fetch("./variations.json")
         ]).then(resps => {
 
             Promise.all([resps[0].json(), resps[1].json()]).then((jsons) => {
 
                 let context = jsons[0]
-                let variations = jsons[1]
+                let variations = {}//jsons[1]
 
                 //console.log(context, variations)
                 
