@@ -484,14 +484,14 @@ var page = new Vue({
         this.observer = new IntersectionObserver(this.onElementObserved, options);
 
         Promise.all([
-            fetch("./context.json"),
+            fetch("https://ristoro-backend-dev-5f547f8588fc.herokuapp.com/v2/menu"),
             fetch("./variations.json")
         ]).then(resps => {
 
             Promise.all([resps[0].json(), resps[1].json()]).then((jsons) => {
 
                 let context = jsons[0]
-                let variations = jsons[1]
+                let variations = {}
 
                 //console.log(context, variations)
                 
