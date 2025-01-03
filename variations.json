@@ -116,6 +116,7 @@
   },
   "cuba_libre": {
     "hidden": false,
+    "unavailable": true,
     "name": "CUBA LIBRE"
   },
   "nob_hill": {
