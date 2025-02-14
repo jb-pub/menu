@@ -592,5 +592,9 @@
     "hidden": false,
     "unavailable": true,
     "name": "CAFFE ESPRESSO"
+  },
+  "mojito": {
+    "hidden": false,
+    "name": "MOJITO"
   }
 }
